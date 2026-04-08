@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Guía - John Barbas</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles.css?v=2.0">
+    
+    <!-- Critical CSS Fallback -->
+    <style>
+        body { font-family: 'Open Sans', sans-serif; background-color: #f3f4f6; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .main-container { width: 100%; max-width: 480px; background: transparent; }
+        .unified-card, .product-card { background: white; border-radius: 16px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .btn-unified { display: flex; align-items: center; justify-content: center; width: 100%; padding: 14px; border-radius: 12px; font-weight: 600; margin-bottom: 10px; text-decoration: none; border: none; cursor: pointer; }
+        .btn-whatsapp { background-color: #25D366; color: white; }
+        .btn-warning { background-color: #fffbeb; color: #d97706; border: 1px solid #fcd34d; }
+        .page-header { text-align: center; background: white; padding: 30px 20px; border-radius: 16px; margin-bottom: 25px; }
+        .nav-tab { text-decoration: none; color: #6b7280; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center; }
+        .unified-nav { background: white; padding: 10px; border-radius: 16px; display: flex; justify-content: space-around; margin-bottom: 20px; }
+        .product-content { display: flex; gap: 15px; }
+        .product-image-container { width: 80px; height: 80px; flex-shrink: 0; }
+        .product-image { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+        .product-info { flex-grow: 1; }
+        img { max-width: 100%; }
+    </style>
+
+    <meta name="theme-color" content="#2563eb">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="main-container">
+        
+        <nav class="unified-nav">
+            <a href="index.html" class="nav-tab">
+                <i class="fas fa-home"></i>
+                <span>Inicio</span>
+            </a>
+            <a href="productos.html" class="nav-tab">
+                <i class="fas fa-box"></i>
+                <span>Productos</span>
+            </a>
+            <a href="sucursal.html" class="nav-tab">
+                <i class="fas fa-store"></i>
+                <span>Sucursal</span>
+            </a>
+        </nav>
+
+        <header class="page-header">
+            <h1 class="page-title">Guía Definitiva</h1>
+            <p class="page-description">Todo lo que necesitas saber para tener resultados reales.</p>
+        </header>
+
+        <!-- Nota Importante -->
+        <div class="unified-card" style="background-color: #eff6ff; border-color: #bfdbfe;">
+            <div style="display: flex; gap: 10px; align-items: start;">
+                <i class="fas fa-info-circle" style="color: #2563eb; font-size: 1.2rem; margin-top: 3px;"></i>
+                <p style="font-size: 0.9rem; color: #1e40af; margin: 0;">
+                    <strong>Nota:</strong> Todo mi contenido educativo es gratuito en redes. Si requieres mi tiempo para consultas personales, tiene un costo.
+                </p>
+            </div>
+        </div>
+
+        <!-- Ebook Section -->
+        <div class="unified-card">
+            <div class="card-header">
+                <div class="card-icon" style="background-color: #fffbeb; color: #d97706;">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3 class="card-title">Guía Paso a Paso</h3>
+            </div>
+            <div class="card-content">
+                <p class="mb-2">Por solo <strong>$6 USD</strong> obtendrás:</p>
+                <ul style="list-style: none; margin-bottom: 20px; padding: 0;">
+                    <li class="mb-2"><i class="fas fa-check" style="color: #10b981; margin-right: 8px;"></i> Aplicación correcta del producto</li>
+                    <li class="mb-2"><i class="fas fa-check" style="color: #10b981; margin-right: 8px;"></i> Maximizar resultados en menos tiempo</li>
+                    <li class="mb-2"><i class="fas fa-check" style="color: #10b981; margin-right: 8px;"></i> Errores comunes a evitar</li>
+                    <li class="mb-2"><i class="fas fa-check" style="color: #10b981; margin-right: 8px;"></i> Rutina de mantenimiento</li>
+                </ul>
+                
+                <div class="text-center mb-3" style="background-color: #f3f4f6; padding: 10px; border-radius: 8px;">
+                    <p style="font-size: 0.85rem; color: #4b5563;">📩 Recibirás el PDF automáticamente tras el pago.</p>
+                </div>
+
+                <a href="https://johnbarbas.gumroad.com/l/guiagratis" target="_blank" class="btn-unified btn-warning">
+                    <i class="fas fa-credit-card"></i>
+                    <span>COMPRAR AHORA - $6 USD</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Upsell Productos -->
+        <div class="unified-card">
+            <h3 class="card-title mb-2">Combínalo con Productos</h3>
+            
+            <div class="product-card mb-2" style="border: 1px solid #e5e7eb; box-shadow: none;">
+                <div class="product-content">
+                    <div class="product-image-container">
+                        <img src="images/product/1balsamo.jpg" alt="Bálsamo" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title" style="font-size: 0.9rem;">Bálsamo Minoxidil 20%</h4>
+                        <div class="product-price" style="font-size: 1rem;">$699 MXN</div>
+                        <a href="https://wa.me/525569380408?text=Hola%20John,%20ya%20tengo%20tu%20guía.%20Quiero%20el%20Bálsamo." target="_blank" class="btn-unified btn-whatsapp" style="font-size: 0.8rem; padding: 8px; margin-bottom: 0;">
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="product-card mb-2" style="border: 1px solid #e5e7eb; box-shadow: none;">
+                <div class="product-content">
+                    <div class="product-image-container">
+                        <img src="images/product/3balsamos.jpg" alt="Pack 3" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title" style="font-size: 0.9rem;">Pack 3 Meses + Regalo</h4>
+                        <div class="product-price" style="font-size: 1rem;">$2,000 MXN</div>
+                        <a href="https://wa.me/525569380408?text=Hola%20John,%20ya%20tengo%20tu%20guía.%20Quiero%20la%20oferta%20de%203%20meses." target="_blank" class="btn-unified btn-whatsapp" style="font-size: 0.8rem; padding: 8px; margin-bottom: 0;">
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="unified-footer">
+            <p><strong>John Barbas</strong></p>
+            <div class="mb-2">
+                <a href="tel:+525569380408"><i class="fas fa-phone"></i> 55 6938 0408</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <a href="https://wa.me/525569380408" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>

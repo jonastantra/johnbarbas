@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - John Barbas</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles.css?v=3.0">
+    
+    <!-- Critical CSS Fallback -->
+    <style>
+        body { font-family: 'Open Sans', sans-serif; background-color: #f8fafc; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .main-container { width: 100%; max-width: 480px; background: transparent; }
+        .unified-card, .product-card { background: white; border-radius: 20px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08); }
+        .btn-unified { display: flex; align-items: center; justify-content: center; width: 100%; padding: 14px; border-radius: 14px; font-weight: 600; margin-bottom: 10px; text-decoration: none; border: none; cursor: pointer; }
+        .btn-whatsapp { background-color: #25D366; color: white; }
+        .btn-primary { background-color: white; color: #2563eb; border: 2px solid #2563eb; }
+        .page-header { text-align: center; background: white; padding: 35px 25px; border-radius: 20px; margin-bottom: 25px; }
+        .nav-tab { text-decoration: none; color: #6b7280; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center; }
+        .unified-nav { background: white; padding: 12px; border-radius: 20px; display: flex; justify-content: space-around; margin-bottom: 20px; }
+        .product-content { display: flex; gap: 15px; }
+        .product-image-container { width: 90px; height: 90px; flex-shrink: 0; border-radius: 14px; overflow: hidden; }
+        .product-image { width: 100%; height: 100%; object-fit: cover; }
+        .product-info { flex-grow: 1; }
+        .product-price { color: #2563eb; font-weight: 700; font-size: 1.1rem; }
+        img { max-width: 100%; }
+    </style>
+
+    <meta name="theme-color" content="#2563eb">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="main-container">
+        
+        <nav class="unified-nav">
+            <a href="index.html" class="nav-tab">
+                <i class="fas fa-home"></i>
+                <span>Inicio</span>
+            </a>
+            <a href="productos.html" class="nav-tab active">
+                <i class="fas fa-box"></i>
+                <span>Productos</span>
+            </a>
+            <a href="sucursal.html" class="nav-tab">
+                <i class="fas fa-store"></i>
+                <span>Sucursal</span>
+            </a>
+        </nav>
+
+        <header class="page-header">
+            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);">
+                <i class="fas fa-box-open" style="font-size: 1.6rem; color: white;"></i>
+            </div>
+            <h1 class="page-title">Catálogo</h1>
+            <p class="page-description">Productos 100% originales y garantizados para tu crecimiento.</p>
+            <div style="display: flex; justify-content: center; gap: 12px; margin-top: 15px; flex-wrap: wrap;">
+                <span style="background: #dcfce7; color: #166534; padding: 6px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+                    <i class="fas fa-truck" style="margin-right: 4px;"></i>Envío Gratis
+                </span>
+                <span style="background: #dbeafe; color: #1e40af; padding: 6px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+                    <i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Garantizado
+                </span>
+                <span style="background: #fef3c7; color: #d97706; padding: 6px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+                    <i class="fas fa-check-circle" style="margin-right: 4px;"></i>Originales
+                </span>
+            </div>
+        </header>
+
+        <!-- 6 Meses Kirkland - Más Vendido (PRIMERO) -->
+        <div class="product-card" style="border: 2px solid #2563eb; background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);">
+            <div style="position: absolute; top: -1px; left: 20px; right: 20px; height: 3px; background: linear-gradient(90deg, #2563eb, #3b82f6); border-radius: 0 0 4px 4px;"></div>
+            <div style="position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white; font-size: 0.7rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);">
+                ⭐ Más Vendido
+            </div>
+            <div class="product-content">
+                <div class="product-image-container">
+                    <img src="images/product/6meses.jpg" alt="6 Meses Kirkland" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">6 Meses Minoxidil Kirkland</h3>
+                    <p class="product-description">La caja original sellada para medio año de tratamiento continuo.</p>
+                    <div class="product-price">$1,100 MXN</div>
+                    <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20los%206%20meses%20Kirkland." target="_blank" class="btn-unified btn-whatsapp" style="font-size: 0.9rem; padding: 12px;">
+                        <i class="fab fa-whatsapp"></i> Pedir ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pack 3 Meses + 1 Regalo -->
+        <div class="product-card" style="border: 1px solid #e9d5ff; background: linear-gradient(135deg, #fdf4ff 0%, #faf5ff 100%);">
+            <div style="position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; font-size: 0.7rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);">
+                ¡Oferta!
+            </div>
+            <div class="product-content">
+                <div class="product-image-container">
+                    <img src="images/product/3balsamos.jpg" alt="Pack 3 Bálsamos" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Pack 3 Meses + 1 Regalo</h3>
+                    <p class="product-description">Tratamiento completo para resultados sólidos. Incluye bálsamo extra gratis.</p>
+                    <div class="product-price">$2,000 MXN</div>
+                    <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20la%20oferta%20de%203%20Meses%20%2B%201%20Regalo%20por%20$2000." target="_blank" class="btn-unified btn-whatsapp" style="font-size: 0.9rem; padding: 12px;">
+                        <i class="fab fa-whatsapp"></i> Pedir ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Balsamo -->
+        <div class="product-card">
+            <div style="position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; font-size: 0.7rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);">
+                Recomendado
+            </div>
+            <div class="product-content">
+                <div class="product-image-container">
+                    <img src="images/product/1balsamo.jpg" alt="Bálsamo Minoxidil" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Bálsamo Minoxidil 20% Maximus</h3>
+                    <p class="product-description">Crecimiento acelerado de barba y cierre de huecos. Fórmula extra fuerte.</p>
+                    <div class="product-price">$699 MXN</div>
+                    <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20el%20B%C3%A1lsamo%20Minoxidil%2020%25." target="_blank" class="btn-unified btn-whatsapp" style="font-size: 0.9rem; padding: 12px;">
+                        <i class="fab fa-whatsapp"></i> Pedir ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Meses Kirkland -->
+        <div class="product-card">
+            <div style="position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; font-size: 0.7rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);">
+                Popular
+            </div>
+            <div class="product-content">
+                <div class="product-image-container">
+                    <img src="images/product/3meses.jpg" alt="3 Meses Kirkland" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">3 Meses Minoxidil Kirkland</h3>
+                    <p class="product-description">Kit de inicio ideal para probar la efectividad del minoxidil líquido.</p>
+                    <div class="product-price">$600 MXN</div>
+                    <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20el%20pack%20de%203%20meses%20Kirkland." target="_blank" class="btn-unified btn-whatsapp" style="font-size: 0.9rem; padding: 12px;">
+                        <i class="fab fa-whatsapp"></i> Pedir ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Biotina -->
+        <div class="product-card">
+            <div class="product-content">
+                <div class="product-image-container">
+                    <img src="images/product/biotina.jpg" alt="Biotina Natrol" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Biotina 10,000 mcg</h3>
+                    <p class="product-description">Suplemento esencial para fortalecer cabello y uñas. 100 tabletas.</p>
+                    <div class="product-price">$450 MXN</div>
+                    <a href="https://wa.me/525569380408?text=Hola%20John,%20me%20interesa%20la%20Biotina%20Natrol%20por%20$450." target="_blank" class="btn-unified btn-whatsapp" style="font-size: 0.9rem; padding: 12px;">
+                        <i class="fab fa-whatsapp"></i> Pedir ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dermaroller -->
+        <div class="product-card">
+            <div class="product-content">
+                <div class="product-image-container">
+                    <img src="images/product/dermaroller.jpg" alt="Dermaroller" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Dermaroller 0.5mm</h3>
+                    <p class="product-description">Estimula la circulación y mejora la absorción del minoxidil.</p>
+                    <div class="product-price">$240 MXN</div>
+                    <a href="https://wa.me/525569380408?text=Hola%20John,%20me%20interesa%20el%20Dermaroller%20por%20$240." target="_blank" class="btn-unified btn-whatsapp" style="font-size: 0.9rem; padding: 12px;">
+                        <i class="fab fa-whatsapp"></i> Pedir ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jabon -->
+        <div class="product-card">
+            <div class="product-content">
+                <div class="product-image-container">
+                    <img src="images/product/jabon-bergamota.jpg" alt="Jabón Bergamota" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Jabón de Bergamota</h3>
+                    <p class="product-description">Limpieza profunda y estimulación natural para tu barba.</p>
+                    <div class="product-price">$100 MXN</div>
+                    <a href="https://wa.me/525569380408?text=Hola%20John,%20me%20interesa%20el%20Jab%C3%B3n%20de%20Bergamota%20por%20$100." target="_blank" class="btn-unified btn-whatsapp" style="font-size: 0.9rem; padding: 12px;">
+                        <i class="fab fa-whatsapp"></i> Pedir ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón flotante WhatsApp -->
+        <a href="https://wa.me/525569380408" target="_blank" class="whatsapp-float">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+    </div>
+</body>
+</html>

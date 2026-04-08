@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucursal - John Barbas</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles.css?v=2.0">
+    
+    <!-- Critical CSS Fallback -->
+    <style>
+        body { font-family: 'Open Sans', sans-serif; background-color: #f3f4f6; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .main-container { width: 100%; max-width: 480px; background: transparent; }
+        .unified-card { background: white; border-radius: 16px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .btn-unified { display: flex; align-items: center; justify-content: center; width: 100%; padding: 14px; border-radius: 12px; font-weight: 600; margin-bottom: 10px; text-decoration: none; border: none; cursor: pointer; }
+        .btn-whatsapp { background-color: #25D366; color: white; }
+        .btn-primary { background-color: white; color: #2563eb; border: 2px solid #2563eb; }
+        .page-header { text-align: center; background: white; padding: 30px 20px; border-radius: 16px; margin-bottom: 25px; }
+        .nav-tab { text-decoration: none; color: #6b7280; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center; }
+        .unified-nav { background: white; padding: 10px; border-radius: 16px; display: flex; justify-content: space-around; margin-bottom: 20px; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; background: #000; margin: 10px 0; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        img { max-width: 100%; }
+    </style>
+
+    <meta name="theme-color" content="#2563eb">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="main-container">
+        
+        <nav class="unified-nav">
+            <a href="index.html" class="nav-tab">
+                <i class="fas fa-home"></i>
+                <span>Inicio</span>
+            </a>
+            <a href="productos.html" class="nav-tab">
+                <i class="fas fa-box"></i>
+                <span>Productos</span>
+            </a>
+            <a href="sucursal.html" class="nav-tab active">
+                <i class="fas fa-store"></i>
+                <span>Sucursal</span>
+            </a>
+        </nav>
+
+        <header class="page-header">
+            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);">
+                <i class="fas fa-store" style="font-size: 1.8rem; color: white;"></i>
+            </div>
+            <h1 class="page-title">Nuestras Sucursales</h1>
+            <p class="page-description">Visítanos para recibir asesoría personalizada y ver los productos.</p>
+            <div style="display: flex; justify-content: center; gap: 15px; margin-top: 15px;">
+                <span style="background: #dcfce7; color: #166534; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+                    <i class="fas fa-user-tie" style="margin-right: 4px;"></i>Asesoría Gratis
+                </span>
+                <span style="background: #fef3c7; color: #d97706; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+                    <i class="fas fa-clock" style="margin-right: 4px;"></i>Abierto Ahora
+                </span>
+            </div>
+        </header>
+
+        <!-- Sucursal Guelatao -->
+        <div class="unified-card" style="border-left: 4px solid #10b981;">
+            <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); color: #166534;">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                    <h3 class="card-title">Plaza de la Tau - Guelatao</h3>
+                    <p style="font-size: 0.8rem; color: #6b7280; margin: 0;">Sucursal Principal</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <p class="mb-2" style="font-weight: 600; color: var(--text-main);">
+                    <i class="fas fa-box" style="color: var(--primary); margin-right: 8px;"></i>Minoxidil Kirkland CDMX
+                </p>
+                <div style="border-radius: 12px; overflow: hidden; margin-bottom: 15px; box-shadow: var(--shadow-md);">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.6041913886825!2d-99.0359153!3d19.386283799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fd14babc2e7d%3A0xf02cbb69a1d6cf17!2sMinoxidil%20kirkland%20Cdmx!5e0!3m2!1ses-419!2smx!4v1754842045127!5m2!1ses-419!2smx" 
+                        style="border:0; width: 100%; height: 180px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <a href="https://share.google/f5qqUNUAU4VTbKCd1" target="_blank" class="btn-unified btn-primary">
+                    <i class="fas fa-directions"></i>
+                    <span>Cómo llegar</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Sucursal Neza -->
+        <div class="unified-card" style="border-left: 4px solid #2563eb;">
+            <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); color: #1e40af;">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                    <h3 class="card-title">Sucursal Neza / Los Reyes</h3>
+                    <p style="font-size: 0.8rem; color: #6b7280; margin: 0;">Sucursal Alterna</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <p class="mb-2" style="font-weight: 600; color: var(--text-main);">
+                    <i class="fas fa-box" style="color: var(--primary); margin-right: 8px;"></i>Minoxidil Kirkland Neza
+                </p>
+                <div style="border-radius: 12px; overflow: hidden; margin-bottom: 15px; box-shadow: var(--shadow-md);">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.8988284942325!2d-98.9810304!3d19.3735329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e3be13451219%3A0x244be3f70d3b92d1!2sMinoxidil%20Kirkland%20Neza!5e0!3m2!1ses-419!2smx!4v1754841993357!5m2!1ses-419!2smx" 
+                        style="border:0; width: 100%; height: 180px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <a href="https://share.google/JQ8L0UKSo2MIT8HhW" target="_blank" class="btn-unified btn-primary">
+                    <i class="fas fa-directions"></i>
+                    <span>Cómo llegar</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Horarios -->
+        <div class="unified-card" style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border-color: #fcd34d;">
+            <div class="card-header">
+                <div class="card-icon" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); color: #d97706;">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3 class="card-title">Horarios de Atención</h3>
+            </div>
+            <div class="card-content">
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #e5e7eb;">
+                        <span style="font-weight: 600;"><i class="fas fa-calendar-day" style="color: #10b981; margin-right: 8px;"></i>Martes a Domingo</span>
+                        <span style="background: #dcfce7; color: #166534; padding: 4px 12px; border-radius: 20px; font-weight: 600; font-size: 0.85rem;">12:00 PM - 5:00 PM</span>
+                    </li>
+                    <li style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0;">
+                        <span style="font-weight: 600;"><i class="fas fa-moon" style="color: #ef4444; margin-right: 8px;"></i>Lunes</span>
+                        <span style="background: #fee2e2; color: #dc2626; padding: 4px 12px; border-radius: 20px; font-weight: 600; font-size: 0.85rem;">Cerrado</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Agendar Cita -->
+        <div class="mb-3 mt-3">
+            <a href="https://wa.me/525569380408?text=Hola%20John,%20quisiera%20agendar%20una%20visita%20a%20la%20sucursal." target="_blank" class="btn-unified btn-whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span>Agendar Visita</span>
+            </a>
+        </div>
+
+        <!-- Video Cómo Llegar -->
+        <div class="unified-card">
+            <h3 class="card-title mb-2">¿Cómo llegar? (Video)</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/VrkZQNMnSNI" title="Cómo llegar" frameborder="0" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="unified-footer">
+            <p><strong>John Barbas</strong></p>
+            <div class="mb-2">
+                <a href="tel:+525569380408"><i class="fas fa-phone"></i> 55 6938 0408</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <a href="https://wa.me/525569380408" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>

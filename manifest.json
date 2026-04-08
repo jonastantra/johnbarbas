@@ -1,0 +1,124 @@
+{
+  "name": "John Barbas - Minoxidil Premium",
+  "short_name": "John Barbas",
+  "description": "Experto en Minoxidil Premium. Crecimiento de barba y cabello garantizado en 90 días. Más de 3000 clientes satisfechos en México.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "es",
+  "dir": "ltr",
+  "categories": ["health", "beauty", "shopping"],
+  "icons": [
+    {
+      "src": "images/profile_johnbarbas1.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/profile_johnbarbas1.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/screenshot-mobile.jpg",
+      "sizes": "390x844",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Página principal en móvil"
+    },
+    {
+      "src": "images/screenshot-desktop.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Página principal en escritorio"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ver Productos",
+      "short_name": "Productos",
+      "description": "Ver todos los productos de Minoxidil disponibles",
+      "url": "/productos.html",
+      "icons": [
+        {
+          "src": "images/product/1balsamo.jpg",
+          "sizes": "96x96",
+          "type": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "name": "Contactar WhatsApp",
+      "short_name": "WhatsApp",
+      "description": "Contactar directamente por WhatsApp",
+      "url": "https://wa.me/525569380408",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiByeD0iNDgiIGZpbGw9IiMyNUQzNjYiLz4KPHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIyNCIgeT0iMjQiPgo8cGF0aCBkPSJNMTcuNDcyIDEzLjQwOEMxNy4zNjggMTMuMzU2IDE2LjI0IDEyLjc5NiAxNS44NTYgMTIuNjQ0QzE1LjQ3MiAxMi40OTIgMTUuMjQgMTIuNDkyIDE1LjAwOCAxMi44NzZDMTQuNzc2IDEzLjI2IDE0LjM5MiAxMy43NzIgMTQuMjQgMTMuOTI0QzE0LjA4OCAxNC4wNzYgMTMuOTM2IDE0LjEwNCAxMy43MDQgMTMuOTI0QzEzLjQ3MiAxMy43NDQgMTIuNjQ0IDEzLjQ2NCAxMS42NjQgMTIuNTY0QzEwLjkzMiAxMS45MDggMTAuNDY0IDExLjEwNCAxMC4zMTIgMTAuODcyQzEwLjE2IDEwLjY0IDEwLjI4NCAxMC41MTIgMTAuNDM2IDEwLjM2QzEwLjU3NiAxMC4yMiAxMC43NDggMTAgMTAuODcyIDkuODQ4QzEwLjk5NiA5LjY5NiAxMS4wNTIgOS41NzIgMTEuMTA0IDkuNDJDMTEuMTU2IDkuMjY4IDExLjEzIDkuMTQgMTEuMDUyIDkuMDE2QzExIDguODkyIDEwLjQ2NCA3Ljc2NCAxMC4wOCA3LjM4QzkuNjk2IDYuOTk2IDkuMzEyIDcuMDQ4IDkuMTA4IDcuMDQ4QzguOTA0IDcuMDQ4IDguNjQ0IDcuMDc2IDguNDEyIDcuMzA4QzguMTggNy41NCA3LjU2OCA4LjEyNCA3LjU2OCA5LjE1NkM3LjU2OCAxMC4xODggOC4yOTIgMTEuMTY4IDguNDE2IDExLjMyQzguNTQgMTEuNDcyIDEwLjA4IDEzLjg4NCAxMi40NjggMTQuODY0QzE0Ljg1NiAxNS44NDQgMTQuODU2IDE1LjU2NCAxNS4yNCAxNS41MzZDMTUuNjI0IDE1LjUwOCAxNi40NzIgMTQuOTc2IDE2LjY1MiAxNC40NjhDMTYuODMyIDEzLjk2IDE2LjgzMiAxMy41MzIgMTYuNzggMTMuNDM2QzE2LjcyOCAxMy4zNCAxNi41NzYgMTMuMjg4IDE2LjM0NCAxMy4xODhMMTcuNDcyIDEzLjQwOFoiIGZpbGw9IndoaXRlIi8+CjwvcGF0aD4KPC9zdmc+Cjwvc3ZnPgo=",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Ver Sucursal",
+      "short_name": "Sucursal",
+      "description": "Información de la sucursal y ubicación",
+      "url": "/sucursal.html",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiByeD0iNDgiIGZpbGw9IiMzQjgyRjYiLz4KPHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIyNCIgeT0iMjQiPgo8cGF0aCBkPSJNMTIgMkM4LjEzIDIgNSA1LjEzIDUgOUM1IDEwLjc0IDUuNSAxMi4zNyA2LjQxIDEzLjc4TDEyIDIyTDE3LjU5IDEzLjc4QzE4LjUgMTIuMzcgMTkgMTAuNzQgMTkgOUMxOSA1LjEzIDE1Ljg3IDIgMTIgMlpNMTIgMTEuNUMxMC42MiAxMS41IDkuNSAxMC4zOCA5LjUgOUM5LjUgNy42MiAxMC42MiA2LjUgMTIgNi41QzEzLjM4IDYuNSAxNC41IDcuNjIgMTQuNSA5QzE0LjUgMTAuMzggMTMuMzggMTEuNSAxMiAxMS41WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cjwvc3ZnPgo=",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.whatsapp",
+      "id": "com.whatsapp"
+    }
+  ],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "handle_links": "preferred",
+  "capture_links": "existing-client-navigate",
+  "protocol_handlers": [
+    {
+      "protocol": "web+johnbarbas",
+      "url": "/?action=%s"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/",
+      "accept": {
+        "image/*": [".jpg", ".jpeg", ".png", ".webp"]
+      }
+    }
+  ],
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}
