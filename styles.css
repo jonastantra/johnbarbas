@@ -537,6 +537,145 @@ a:focus-visible {
 }
 
 /* ========================================
+   GUÍA DE USO 3 PASOS
+======================================== */
+.steps-guide {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 14px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.step-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    border-color: #bfdbfe;
+}
+
+.step-circle {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: var(--font-heading);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* ========================================
+   ANTES Y DESPUÉS (BEFORE/AFTER)
+======================================== */
+.before-after-gallery {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.before-after-item {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease;
+}
+
+.before-after-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ========================================
+   FAQ - ACORDEÓN
+======================================== */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.faq-item {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    transition: box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+    text-align: left;
+    transition: background 0.2s ease;
+}
+
+.faq-question:hover {
+    background: #f8fafc;
+}
+
+.faq-icon {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background: #f8fafc;
+}
+
+.faq-answer p {
+    padding: 0 16px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    padding: 12px 0;
+}
+
+/* ========================================
    MEDIA QUERIES
 ======================================== */
 @media (max-width: 400px) {
@@ -549,5 +688,17 @@ a:focus-visible {
     .product-image-container {
         width: 100%;
         height: 150px;
+    }
+    .before-after-gallery {
+        grid-template-columns: 1fr;
+    }
+    .before-after-gallery .fa-arrow-right {
+        transform: rotate(90deg);
+        margin: 4px 0;
+    }
+    .step-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
