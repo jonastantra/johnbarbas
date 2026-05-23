@@ -5,22 +5,22 @@
 ======================================== */
 :root {
     /* Paleta Principal - Tonos más sobrios y profesionales */
-    --primary: #2563eb;      /* Azul profesional */
-    --primary-dark: #1e40af;
-    --primary-light: #3b82f6;
+    --primary: #1d4ed8;      /* Azul profesional */
+    --primary-dark: #1e3a8a;
+    --primary-light: #2563eb;
     --whatsapp: #25D366;     /* WhatsApp oficial */
     --whatsapp-dark: #128C7E;
     --whatsapp-light: #30d66a;
     
     /* Tonos Neutros - Mejor contraste */
-    --bg-body: #f8fafc;       /* Gris muy suave para fondo */
+    --bg-body: #e8eef6;       /* Gris muy suave para fondo */
     --bg-card: #ffffff;       /* Blanco puro para tarjetas */
-    --bg-card-hover: #f8fafc;
+    --bg-card-hover: #eef5ff;
     --text-main: #0f172a;     /* Gris muy oscuro para lectura - mejor contraste */
     --text-muted: #475569;    /* Gris medio para secundarios - más oscuro */
     --text-light: #94a3b8;    /* Para textos muy claros */
-    --border-color: #e2e8f0;  /* Bordes más visibles */
-    --border-strong: #cbd5e1;
+    --border-color: #cbd5e1;  /* Bordes más visibles */
+    --border-strong: #94a3b8;
 
     /* Acentos */
     --accent-warning: #f59e0b;
@@ -34,9 +34,9 @@
     --spacing-unit: 1rem;
 
     /* Sombras más definidas */
-    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+    --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.08);
+    --shadow-md: 0 8px 18px rgba(15, 23, 42, 0.10);
+    --shadow-lg: 0 14px 28px rgba(15, 23, 42, 0.14);
     --shadow-glow-whatsapp: 0 8px 20px rgba(37, 211, 102, 0.35);
     --shadow-glow-primary: 0 8px 20px rgba(37, 99, 235, 0.25);
     
@@ -60,7 +60,7 @@ html {
 
 body {
     font-family: var(--font-body);
-    background: linear-gradient(180deg, var(--bg-body) 0%, #e2e8f0 100%);
+    background: linear-gradient(180deg, #eef4fb 0%, var(--bg-body) 42%, #d8e1ec 100%);
     color: var(--text-main);
     line-height: 1.6;
     min-height: 100vh;
@@ -114,7 +114,7 @@ a:focus-visible {
     position: sticky;
     top: 10px;
     z-index: 100;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-strong);
 }
 
 .nav-tab {
@@ -134,15 +134,15 @@ a:focus-visible {
 }
 
 .nav-tab.active {
-    color: var(--primary);
-    background-color: #eff6ff;
+    color: var(--primary-dark);
+    background: linear-gradient(180deg, #dbeafe 0%, #eff6ff 100%);
     font-weight: 600;
-    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+    box-shadow: 0 6px 14px rgba(29, 78, 216, 0.18);
 }
 
 .nav-tab:hover:not(.active) {
     background-color: var(--bg-card-hover);
-    color: var(--text-main);
+    color: var(--primary-dark);
 }
 
 /* ========================================
@@ -304,13 +304,15 @@ a:focus-visible {
 
 /* Botón Primario (Acciones Secundarias) */
 .btn-primary {
-    background-color: var(--bg-card);
-    color: var(--primary);
+    background: linear-gradient(180deg, #ffffff 0%, #eef5ff 100%);
+    color: var(--primary-dark);
     border: 2px solid var(--primary);
+    box-shadow: 0 4px 10px rgba(29, 78, 216, 0.10);
 }
 
 .btn-primary:hover {
-    background-color: #eff6ff;
+    background-color: #dbeafe;
+    box-shadow: 0 8px 18px rgba(29, 78, 216, 0.16);
 }
 
 /* Botón Secundario (Enlaces externos) */
@@ -401,7 +403,7 @@ a:focus-visible {
 }
 
 .stat-item {
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #eef5ff 100%);
     padding: 16px 12px;
     border-radius: 14px;
     border: 1px solid var(--border-color);
@@ -439,7 +441,7 @@ a:focus-visible {
 .trust-strip-item {
     align-items: center;
     background: #ffffff;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-strong);
     border-radius: 14px;
     box-shadow: var(--shadow-sm);
     display: flex;
@@ -449,7 +451,7 @@ a:focus-visible {
 
 .trust-strip-item i {
     align-items: center;
-    background: #eff6ff;
+    background: #dbeafe;
     border-radius: 50%;
     color: var(--primary);
     display: flex;
@@ -472,8 +474,8 @@ a:focus-visible {
 }
 
 .order-guide-card {
-    background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
-    border-color: #bfdbfe;
+    background: linear-gradient(135deg, #dbeafe 0%, #ffffff 100%);
+    border-color: #93c5fd;
 }
 
 .order-guide-list {
@@ -502,10 +504,10 @@ a:focus-visible {
 }
 
 .kit-picker-grid a {
-    background: #f8fafc;
-    border: 1px solid var(--border-color);
+    background: #ffffff;
+    border: 1px solid var(--border-strong);
     border-radius: 14px;
-    color: var(--text-main);
+    color: #020617;
     padding: 14px 12px;
     text-align: center;
     text-decoration: none;
@@ -534,8 +536,8 @@ a:focus-visible {
 }
 
 .lead-card {
-    background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
-    border-color: #bbf7d0;
+    background: linear-gradient(135deg, #dcfce7 0%, #ffffff 100%);
+    border-color: #86efac;
 }
 
 .lead-form {
@@ -547,7 +549,7 @@ a:focus-visible {
 .lead-form select {
     appearance: none;
     background: #fff;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-strong);
     border-radius: 12px;
     color: var(--text-main);
     font: inherit;
@@ -568,7 +570,7 @@ a:focus-visible {
 }
 
 .pickup-card {
-    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #eef5ff 100%);
 }
 
 .pickup-actions {
@@ -580,6 +582,12 @@ a:focus-visible {
 .pickup-actions .btn-unified {
     margin-bottom: 0;
     min-height: 48px;
+}
+
+.note-card {
+    background: #dbeafe !important;
+    border-color: #93c5fd !important;
+    box-shadow: 0 8px 18px rgba(29, 78, 216, 0.12);
 }
 
 /* ========================================
@@ -767,7 +775,7 @@ a:focus-visible {
 }
 
 .faq-item {
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-strong);
     border-radius: 14px;
     overflow: hidden;
     background: white;
@@ -786,7 +794,7 @@ a:focus-visible {
     justify-content: space-between;
     gap: 12px;
     padding: 16px 18px;
-    background: #fafbfc;
+    background: #f8fbff;
     border: none;
     cursor: pointer;
     font-family: var(--font-heading);
@@ -799,7 +807,7 @@ a:focus-visible {
 }
 
 .faq-question:hover {
-    background: #eff6ff;
+    background: #dbeafe;
     color: var(--primary);
 }
 
@@ -811,7 +819,7 @@ a:focus-visible {
 .faq-icon {
     font-size: 0.75rem;
     color: var(--primary);
-    background: #eff6ff;
+    background: #dbeafe;
     width: 28px;
     height: 28px;
     border-radius: 50%;
