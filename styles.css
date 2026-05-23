@@ -428,6 +428,161 @@ a:focus-visible {
 }
 
 /* ========================================
+   LINKTREE FAST CONVERSION BLOCKS
+======================================== */
+.trust-strip {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.trust-strip-item {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    gap: 10px;
+    padding: 12px 14px;
+}
+
+.trust-strip-item i {
+    align-items: center;
+    background: #eff6ff;
+    border-radius: 50%;
+    color: var(--primary);
+    display: flex;
+    height: 34px;
+    justify-content: center;
+    min-width: 34px;
+}
+
+.trust-strip-item strong {
+    color: var(--text-main);
+    display: block;
+    font-size: 0.88rem;
+}
+
+.trust-strip-item span {
+    color: var(--text-muted);
+    display: block;
+    font-size: 0.76rem;
+    line-height: 1.35;
+}
+
+.order-guide-card {
+    background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+    border-color: #bfdbfe;
+}
+
+.order-guide-list {
+    display: grid;
+    gap: 8px;
+}
+
+.order-guide-list span {
+    background: #fff;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    color: var(--text-main);
+    font-size: 0.86rem;
+    font-weight: 600;
+    padding: 10px 12px;
+}
+
+.kit-picker-card {
+    padding: 18px;
+}
+
+.kit-picker-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.kit-picker-grid a {
+    background: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    color: var(--text-main);
+    padding: 14px 12px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kit-picker-grid a:hover {
+    border-color: var(--primary);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12);
+    transform: translateY(-2px);
+}
+
+.kit-picker-grid strong,
+.kit-picker-grid span {
+    display: block;
+}
+
+.kit-picker-grid strong {
+    font-size: 0.86rem;
+    margin-bottom: 4px;
+}
+
+.kit-picker-grid span {
+    color: var(--text-muted);
+    font-size: 0.74rem;
+}
+
+.lead-card {
+    background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+    border-color: #bbf7d0;
+}
+
+.lead-form {
+    display: grid;
+    gap: 10px;
+}
+
+.lead-form input,
+.lead-form select {
+    appearance: none;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-main);
+    font: inherit;
+    min-height: 46px;
+    padding: 12px 14px;
+    width: 100%;
+}
+
+.lead-form input:focus,
+.lead-form select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    outline: none;
+}
+
+.lead-form button {
+    margin-bottom: 0;
+}
+
+.pickup-card {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.pickup-actions {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pickup-actions .btn-unified {
+    margin-bottom: 0;
+    min-height: 48px;
+}
+
+/* ========================================
    FOOTER
 ======================================== */
 .unified-footer {
@@ -715,6 +870,10 @@ a:focus-visible {
 ======================================== */
 @media (max-width: 400px) {
     .stats-container {
+        grid-template-columns: 1fr;
+    }
+    .kit-picker-grid,
+    .pickup-actions {
         grid-template-columns: 1fr;
     }
     .product-content {

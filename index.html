@@ -18,6 +18,7 @@
     
     <!-- Main Styles -->
     <link rel="stylesheet" href="styles.css?v=3.1">
+    <link rel="preload" as="image" href="images/profile_johnbarbas1.jpg">
     
     <!-- Critical CSS Fallback -->
     <style>
@@ -102,6 +103,30 @@
             <i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i>
             <span>Escríbeme para elegir mi kit</span>
         </a>
+
+        <div class="trust-strip">
+            <div class="trust-strip-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                    <strong>Original</strong>
+                    <span>Fotos y lote por WhatsApp</span>
+                </div>
+            </div>
+            <div class="trust-strip-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <strong>Entrega segura</strong>
+                    <span>Sucursal, Neza o punto acordado</span>
+                </div>
+            </div>
+            <div class="trust-strip-item">
+                <i class="fas fa-comments"></i>
+                <div>
+                    <strong>Asesoría clara</strong>
+                    <span>Te digo qué kit conviene</span>
+                </div>
+            </div>
+        </div>
 
         <!-- Kit para Principiantes -->
         <div class="unified-card" style="background: linear-gradient(135deg, #fef9c3 0%, #fef08a 100%); border: 2px solid #facc15; padding: 20px; position: relative; overflow: hidden;">
@@ -246,6 +271,62 @@
             </div>
         </div>
 
+        <div class="unified-card order-guide-card">
+            <h3 class="card-title" style="margin-bottom: 12px; text-align: center;">Si vienes de TikTok, mándame esto</h3>
+            <div class="order-guide-list">
+                <span>1. Quiero barba o cabello</span>
+                <span>2. Estoy en mi ciudad o zona</span>
+                <span>3. Quiero empezar con 1, 3 o 6 meses</span>
+            </div>
+            <a href="https://wa.me/525569380408?text=Hola%20John,%20vengo%20de%20TikTok.%20Quiero%20orientaci%C3%B3n%20para%20barba%2Fcabello.%20Estoy%20en%20%5Bmi%20ciudad%5D%20y%20quiero%20saber%20qu%C3%A9%20kit%20me%20conviene." target="_blank" class="btn-unified btn-whatsapp" style="margin-top: 14px; margin-bottom: 0;">
+                <i class="fab fa-whatsapp"></i>
+                <span>Mandar mensaje listo</span>
+            </a>
+        </div>
+
+        <div class="unified-card kit-picker-card">
+            <h3 class="card-title" style="margin-bottom: 12px; text-align: center;">Elige rápido tu kit</h3>
+            <div class="kit-picker-grid">
+                <a href="https://wa.me/525569380408?text=Hola%20John,%20estoy%20empezando.%20Quiero%20saber%20si%20me%20conviene%201%20o%203%20meses%20de%20minoxidil." target="_blank">
+                    <strong>Estoy empezando</strong>
+                    <span>1 o 3 meses</span>
+                </a>
+                <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20un%20tratamiento%20serio.%20Me%20interesa%20el%20kit%20de%206%20meses." target="_blank">
+                    <strong>Voy en serio</strong>
+                    <span>6 meses</span>
+                </a>
+                <a href="https://wa.me/525569380408?text=Hola%20John,%20tengo%20piel%20sensible.%20Quiero%20preguntar%20por%20minoxidil%20espuma." target="_blank">
+                    <strong>Piel sensible</strong>
+                    <span>Pregunta por espuma</span>
+                </a>
+                <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20rutina%20completa%3A%20minoxidil%2C%20biotina%20y%20dermaroller." target="_blank">
+                    <strong>Rutina completa</strong>
+                    <span>Minoxidil + apoyo</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="unified-card lead-card">
+            <h3 class="card-title" style="margin-bottom: 8px; text-align: center;">Recibe mi guía rápida</h3>
+            <p style="font-size: 0.86rem; color: #475569; text-align: center; margin-bottom: 14px;">Déjame tu WhatsApp o correo y te mando orientación para elegir kit.</p>
+            <form id="leadForm" class="lead-form">
+                <input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name">
+                <input type="tel" name="whatsapp" placeholder="WhatsApp" autocomplete="tel">
+                <input type="email" name="email" placeholder="Correo opcional" autocomplete="email">
+                <select name="objetivo">
+                    <option value="">Objetivo</option>
+                    <option value="barba">Barba</option>
+                    <option value="cabello">Cabello</option>
+                    <option value="cejas">Cejas / pestañas</option>
+                    <option value="no-se">No sé, quiero orientación</option>
+                </select>
+                <button type="submit" class="btn-unified btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Enviar por WhatsApp</span>
+                </button>
+            </form>
+        </div>
+
         <!-- Social Proof - Estadísticas -->
         <div class="unified-card" id="animated-counters-section" style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);">
             <h3 class="card-title text-center mb-3" style="font-size: 1.1rem;">
@@ -312,6 +393,21 @@
                 </p>
                 <a href="https://www.tiktok.com/@john_barbas" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #000; color: white; padding: 10px 24px; border-radius: 25px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: transform 0.2s;">
                     <i class="fab fa-tiktok"></i> Ver en TikTok @john_barbas
+                </a>
+            </div>
+        </div>
+
+        <div class="unified-card pickup-card">
+            <h3 class="card-title" style="margin-bottom: 12px;">Compra con confianza</h3>
+            <p style="font-size: 0.9rem; color: #475569; margin-bottom: 12px;">Puedes pedir por WhatsApp, ver catálogo o pasar a sucursal. Si estás en CDMX/Neza, confirma disponibilidad antes de moverte.</p>
+            <div class="pickup-actions">
+                <a href="sucursal.html" class="btn-unified btn-primary">
+                    <i class="fas fa-store"></i>
+                    <span>Sucursal y mapas</span>
+                </a>
+                <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20confirmar%20disponibilidad%20y%20forma%20de%20entrega." target="_blank" class="btn-unified btn-primary">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Confirmar entrega</span>
                 </a>
             </div>
         </div>
@@ -408,6 +504,26 @@
                 });
             });
         });
+        const leadForm = document.getElementById('leadForm');
+        if (leadForm) {
+            leadForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const data = new FormData(leadForm);
+                const nombre = (data.get('nombre') || '').toString().trim();
+                const whatsapp = (data.get('whatsapp') || '').toString().trim();
+                const email = (data.get('email') || '').toString().trim();
+                const objetivo = (data.get('objetivo') || '').toString().trim();
+                const message = [
+                    'Hola John, vengo de TikTok y quiero la guia rapida para elegir mi kit.',
+                    nombre ? `Mi nombre es ${nombre}.` : '',
+                    whatsapp ? `Mi WhatsApp es ${whatsapp}.` : '',
+                    email ? `Mi correo es ${email}.` : '',
+                    objetivo ? `Mi objetivo es ${objetivo}.` : '',
+                    'Quiero que me recomiendes una rutina.'
+                ].filter(Boolean).join(' ');
+                window.open(`https://wa.me/525569380408?text=${encodeURIComponent(message)}`, '_blank');
+            });
+        }
     </script>
     <script src="script.js" async></script>
 </body>
