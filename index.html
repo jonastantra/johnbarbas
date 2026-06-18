@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
     
     <!-- Main Styles -->
-    <link rel="stylesheet" href="styles.css?v=3.1">
+    <link rel="stylesheet" href="styles.css?v=4.0">
     <link rel="preload" as="image" href="images/profile_johnbarbas1.jpg">
     
     <!-- Critical CSS Fallback -->
@@ -82,8 +82,19 @@
             </div>
         </header>
 
+        <!-- TikTok Hook Banner -->
+        <div class="tiktok-hook">
+            <div class="tiktok-hook-icon">
+                <i class="fab fa-tiktok"></i>
+            </div>
+            <div class="tiktok-hook-content">
+                <strong>¿Viste mi TikTok?</strong>
+                <span>Estás en el lugar correcto. Mándame mensaje y te armo tu kit hoy mismo.</span>
+            </div>
+        </div>
+
         <!-- Redes Sociales - Más Visible (Arriba) -->
-        <div class="unified-card" style="background: linear-gradient(135deg, #fdf4ff 0%, #faf5ff 100%); border: 1px solid #e9d5ff; padding: 18px;">
+        <div class="unified-card social-strip-card" style="background: linear-gradient(135deg, #fdf4ff 0%, #faf5ff 100%); border: 1px solid #e9d5ff; padding: 18px;">
             <div style="display: flex; justify-content: center; gap: 16px; font-size: 2rem;">
                 <a href="https://www.tiktok.com/@john_barbas" target="_blank" style="color: #000000; background: white; width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s;">
                     <i class="fab fa-tiktok"></i>
@@ -95,35 +106,38 @@
                     <i class="fab fa-youtube"></i>
                 </a>
             </div>
+            <p style="text-align: center; font-size: 0.78rem; color: #7c3aed; margin: 10px 0 0 0; font-weight: 600;">
+                <i class="fab fa-tiktok" style="margin-right: 4px;"></i>Sígueme en <strong>@john_barbas</strong>
+            </p>
         </div>
 
         <!-- CTA Principal WhatsApp - MÁS GRANDE -->
-        <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20comprar%20un%20kit%20de%20Minoxidil." 
-           target="_blank" class="btn-unified btn-whatsapp" style="padding: 18px 24px; font-size: 1.15rem; margin-bottom: 20px; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);">
-            <i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i>
-            <span>Escríbeme para elegir mi kit</span>
+        <a href="https://wa.me/525569380408?text=Hola%20John,%20vengo%20de%20TikTok%20y%20quiero%20elegir%20mi%20kit%20de%20Minoxidil." 
+           target="_blank" class="btn-unified btn-whatsapp" style="padding: 20px 24px; font-size: 1.18rem; margin-bottom: 16px; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.40);">
+            <i class="fab fa-whatsapp" style="font-size: 1.6rem;"></i>
+            <span>Mándame mensaje por WhatsApp</span>
         </a>
 
         <div class="trust-strip">
             <div class="trust-strip-item">
                 <i class="fas fa-shield-alt"></i>
                 <div>
-                    <strong>Original</strong>
-                    <span>Fotos y lote por WhatsApp</span>
+                    <strong>Producto 100% original</strong>
+                    <span>Te mando fotos y lote por WhatsApp antes de enviar</span>
                 </div>
             </div>
             <div class="trust-strip-item">
-                <i class="fas fa-map-marker-alt"></i>
+                <i class="fas fa-truck-fast"></i>
                 <div>
-                    <strong>Entrega segura</strong>
-                    <span>Sucursal, Neza o punto acordado</span>
+                    <strong>Envío gratis · 2 a 4 días</strong>
+                    <span>A todo México o recojo en sucursal CDMX/Neza</span>
                 </div>
             </div>
             <div class="trust-strip-item">
                 <i class="fas fa-comments"></i>
                 <div>
-                    <strong>Asesoría clara</strong>
-                    <span>Te digo qué kit conviene</span>
+                    <strong>Asesoría honesta y rápida</strong>
+                    <span>Te digo qué kit te conviene según tu caso</span>
                 </div>
             </div>
         </div>
@@ -285,21 +299,22 @@
         </div>
 
         <div class="unified-card kit-picker-card">
-            <h3 class="card-title" style="margin-bottom: 12px; text-align: center;">Elige rápido tu kit</h3>
+            <h3 class="card-title" style="margin-bottom: 6px; text-align: center;">Elige rápido tu kit</h3>
+            <p style="text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px;">Toca tu caso y te mando el kit recomendado</p>
             <div class="kit-picker-grid">
-                <a href="https://wa.me/525569380408?text=Hola%20John,%20estoy%20empezando.%20Quiero%20saber%20si%20me%20conviene%201%20o%203%20meses%20de%20minoxidil." target="_blank">
+                <a href="https://wa.me/525569380408?text=Hola%20John,%20estoy%20empezando.%20Quiero%20saber%20si%20me%20conviene%201%20o%203%20meses%20de%20minoxidil." target="_blank" data-emoji="🌱">
                     <strong>Estoy empezando</strong>
                     <span>1 o 3 meses</span>
                 </a>
-                <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20un%20tratamiento%20serio.%20Me%20interesa%20el%20kit%20de%206%20meses." target="_blank">
+                <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20un%20tratamiento%20serio.%20Me%20interesa%20el%20kit%20de%206%20meses." target="_blank" data-emoji="💪">
                     <strong>Voy en serio</strong>
                     <span>6 meses</span>
                 </a>
-                <a href="https://wa.me/525569380408?text=Hola%20John,%20tengo%20piel%20sensible.%20Quiero%20preguntar%20por%20minoxidil%20espuma." target="_blank">
+                <a href="https://wa.me/525569380408?text=Hola%20John,%20tengo%20piel%20sensible.%20Quiero%20preguntar%20por%20minoxidil%20espuma." target="_blank" data-emoji="🧴">
                     <strong>Piel sensible</strong>
                     <span>Pregunta por espuma</span>
                 </a>
-                <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20rutina%20completa%3A%20minoxidil%2C%20biotina%20y%20dermaroller." target="_blank">
+                <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20rutina%20completa%3A%20minoxidil%2C%20biotina%20y%20dermaroller." target="_blank" data-emoji="🧬">
                     <strong>Rutina completa</strong>
                     <span>Minoxidil + apoyo</span>
                 </a>
@@ -307,24 +322,39 @@
         </div>
 
         <div class="unified-card lead-card">
-            <h3 class="card-title" style="margin-bottom: 8px; text-align: center;">Recibe mi guía rápida</h3>
-            <p style="font-size: 0.86rem; color: #475569; text-align: center; margin-bottom: 14px;">Déjame tu WhatsApp o correo y te mando orientación para elegir kit.</p>
+            <h3 class="card-title" style="margin-bottom: 6px; text-align: center;">Recibe mi guía rápida</h3>
+            <p style="font-size: 0.86rem; color: #475569; text-align: center; margin-bottom: 14px;">Déjame tus datos y te mando una guía para elegir tu kit ideal.</p>
             <form id="leadForm" class="lead-form">
-                <input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name">
-                <input type="tel" name="whatsapp" placeholder="WhatsApp" autocomplete="tel">
-                <input type="email" name="email" placeholder="Correo opcional" autocomplete="email">
-                <select name="objetivo">
-                    <option value="">Objetivo</option>
-                    <option value="barba">Barba</option>
-                    <option value="cabello">Cabello</option>
-                    <option value="cejas">Cejas / pestañas</option>
-                    <option value="no-se">No sé, quiero orientación</option>
-                </select>
+                <div class="lead-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name">
+                </div>
+                <div class="lead-field">
+                    <i class="fab fa-whatsapp"></i>
+                    <input type="tel" name="whatsapp" placeholder="Tu WhatsApp" autocomplete="tel">
+                </div>
+                <div class="lead-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Correo (opcional)" autocomplete="email">
+                </div>
+                <div class="lead-field">
+                    <i class="fas fa-bullseye"></i>
+                    <select name="objetivo">
+                        <option value="">¿Qué quieres tratar?</option>
+                        <option value="barba">Barba</option>
+                        <option value="cabello">Cabello</option>
+                        <option value="cejas">Cejas / pestañas</option>
+                        <option value="no-se">No sé, quiero orientación</option>
+                    </select>
+                </div>
                 <button type="submit" class="btn-unified btn-whatsapp">
                     <i class="fab fa-whatsapp"></i>
-                    <span>Enviar por WhatsApp</span>
+                    <span>Enviar y recibir guía</span>
                 </button>
             </form>
+            <p style="text-align: center; font-size: 0.72rem; color: var(--text-muted); margin: 10px 0 0 0;">
+                <i class="fas fa-lock" style="margin-right: 4px;"></i>Solo te contactamos para orientarte. Sin spam.
+            </p>
         </div>
 
         <!-- Social Proof - Estadísticas -->
