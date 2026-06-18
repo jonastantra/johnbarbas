@@ -430,6 +430,214 @@ a:focus-visible {
 }
 
 /* ========================================
+   TOP STATS BAR (Prueba social inmediata)
+======================================== */
+.top-stats-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    border-radius: 16px;
+    padding: 14px 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.18);
+}
+
+.top-stats-item {
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.top-stats-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 18%;
+    height: 64%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.20);
+}
+
+.top-stats-item strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+.top-stats-item span {
+    display: block;
+    font-size: 0.68rem;
+    color: #cbd5e1;
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.top-stats-item .stars {
+    color: #fbbf24;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+/* ========================================
+   URGENCY BANNER (Envío hoy / cupos)
+======================================== */
+.urgency-banner {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 1px solid #fcd34d;
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.82rem;
+    color: #78350f;
+    font-weight: 600;
+}
+
+.urgency-banner i {
+    color: #d97706;
+    font-size: 1rem;
+}
+
+.urgency-banner strong {
+    color: #92400e;
+    font-weight: 700;
+}
+
+/* ========================================
+   ANCHOR PRICE CARD (Más popular)
+======================================== */
+.anchor-card {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 22px 20px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(29, 78, 216, 0.32);
+}
+
+.anchor-card::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.anchor-badge {
+    display: inline-block;
+    background: #fbbf24;
+    color: #78350f;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.anchor-card h3 {
+    font-family: var(--font-heading);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+}
+
+.anchor-card p {
+    font-size: 0.85rem;
+    color: #dbeafe;
+    margin: 0 0 14px 0;
+}
+
+.anchor-pricing {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.anchor-price-old {
+    font-size: 1.05rem;
+    color: #cbd5e1;
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+.anchor-price-new {
+    font-size: 1.85rem;
+    color: #fbbf24;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    line-height: 1;
+}
+
+.anchor-savings {
+    background: #fbbf24;
+    color: #78350f;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.anchor-card .btn-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
+}
+
+.anchor-meta {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    color: #cbd5e1;
+    text-align: center;
+}
+
+/* ========================================
+   RESPONDEMOS BADGE (en WhatsApp button)
+======================================== */
+.respondemos-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #dcfce7;
+    color: #166534;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.respondemos-badge .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    animation: pulse-green 1.8s infinite;
+}
+
+@keyframes pulse-green {
+    0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+    70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* ========================================
    TIKTOK HOOK BANNER
 ======================================== */
 .tiktok-hook {
@@ -1021,6 +1229,106 @@ a:focus-visible {
     max-height: 300px;
     padding: 14px 0;
     border-top-color: var(--border-color);
+}
+
+/* ========================================
+   MINI SOCIAL PROOF STARS (Bajo CTA principal)
+======================================== */
+.mini-proof {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: -8px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.mini-proof-avatar-group {
+    display: flex;
+    align-items: center;
+}
+
+.mini-proof-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-left: -8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.mini-proof-avatar:first-child {
+    margin-left: 0;
+}
+
+.mini-proof-text {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.mini-proof-text strong {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.mini-proof-stars {
+    color: #fbbf24;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* ========================================
+   SUCURSAL HERO CTA
+======================================== */
+.hero-cta-section {
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+    border-radius: 20px;
+    padding: 24px 20px;
+    margin-bottom: 22px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 12px 28px rgba(29, 78, 216, 0.30);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-cta-section::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.hero-cta-section h2 {
+    color: white;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+}
+
+.hero-cta-section p {
+    color: #dbeafe;
+    font-size: 0.9rem;
+    margin: 0 0 16px 0;
+}
+
+.hero-cta-section .btn-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
 }
 
 /* ========================================

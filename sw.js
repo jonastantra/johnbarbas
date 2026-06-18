@@ -1,9 +1,9 @@
 // Service Worker for John Barbas Website
 // Provides caching, offline functionality, and performance optimizations
 
-const CACHE_NAME = 'johnbarbas-v1.3';
-const STATIC_CACHE = 'johnbarbas-static-v1.3';
-const DYNAMIC_CACHE = 'johnbarbas-dynamic-v1.3';
+const CACHE_NAME = 'johnbarbas-v1.4';
+const STATIC_CACHE = 'johnbarbas-static-v1.4';
+const DYNAMIC_CACHE = 'johnbarbas-dynamic-v1.4';
 
 // Resources to cache immediately
 const STATIC_ASSETS = [
