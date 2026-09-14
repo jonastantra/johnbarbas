@@ -41,3 +41,19 @@ create index if not exists johnbarbas_leads_score_idx
 alter table public.johnbarbas_leads enable row level security;
 
 revoke all on table public.johnbarbas_leads from anon, authenticated;
+
+grant usage on schema public to anon, authenticated;
+grant insert on table public.johnbarbas_leads to anon, authenticated;
+
+drop policy if exists "Anyone can submit a John Barbas lead" on public.johnbarbas_leads;
+create policy "Anyone can submit a John Barbas lead"
+    on public.johnbarbas_leads
+    for insert
+    to anon, authenticated
+    with check (
+        guide_consent = true
+        and whatsapp_marketing_consent = true
+        and name <> ''
+        and email <> ''
+        and whatsapp <> ''
+    );

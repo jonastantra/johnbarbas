@@ -1,4 +1,5 @@
 const LEADS_TABLE = 'johnbarbas_leads';
+const { randomUUID } = require('crypto');
 
 function json(response, statusCode, res) {
     res.statusCode = statusCode;
@@ -48,9 +49,9 @@ function getIp(request) {
 
 async function insertLead(lead) {
     const supabaseUrl = process.env.SUPABASE_URL;
-    const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    const supabaseKey = process.env.SUPABASE_ANON_KEY || process.env.SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-    if (!supabaseUrl || !serviceKey) {
+    if (!supabaseUrl || !supabaseKey) {
         const error = new Error('Supabase is not configured.');
         error.code = 'SUPABASE_NOT_CONFIGURED';
         throw error;
@@ -59,10 +60,10 @@ async function insertLead(lead) {
     const response = await fetch(`${supabaseUrl}/rest/v1/${LEADS_TABLE}`, {
         method: 'POST',
         headers: {
-            apikey: serviceKey,
-            Authorization: `Bearer ${serviceKey}`,
+            apikey: supabaseKey,
+            Authorization: `Bearer ${supabaseKey}`,
             'Content-Type': 'application/json',
-            Prefer: 'return=representation'
+            Prefer: 'return=minimal'
         },
         body: JSON.stringify(lead)
     });
@@ -72,7 +73,7 @@ async function insertLead(lead) {
         throw new Error(body || 'Supabase insert failed.');
     }
 
-    return JSON.parse(body)[0];
+    return lead;
 }
 
 async function notifyWebhook(lead) {
@@ -157,6 +158,7 @@ module.exports = async function handler(request, response) {
     }
 
     const lead = {
+        id: randomUUID(),
         name: cleanText(body.name, 120),
         email: cleanEmail(body.email),
         whatsapp: cleanPhone(body.whatsapp),
@@ -190,7 +192,7 @@ module.exports = async function handler(request, response) {
 
     try {
         const savedLead = await insertLead(lead);
-        const fullLead = { ...lead, id: savedLead.id, created_at: savedLead.created_at };
+        const fullLead = { ...lead, id: savedLead.id };
 
         await Promise.allSettled([
             upsertBrevoContact(fullLead),

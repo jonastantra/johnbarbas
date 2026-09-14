@@ -18,19 +18,19 @@ Valor:
 
 `https://vwyfakgvzghjkodhsmbe.supabase.co`
 
-## 2. Llave privada de Supabase
+## 2. Llave publica de Supabase
 
 Nombre:
 
-`SUPABASE_SERVICE_ROLE_KEY`
+`SUPABASE_ANON_KEY`
 
 Valor:
 
-La llave `service_role` que aparece en Supabase.
+La llave `anon` que aparece en Supabase.
 
 Ruta en Supabase:
 
-Project Settings -> API -> service_role key
+Project Settings -> API -> anon public key
 
 ## 3. Link del libro
 

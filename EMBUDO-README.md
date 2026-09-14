@@ -11,7 +11,7 @@ La persona deja nombre, correo, WhatsApp y objetivo. Despues del registro, la pa
 En Vercel deben existir estas variables:
 
 - `SUPABASE_URL`: `https://vwyfakgvzghjkodhsmbe.supabase.co`
-- `SUPABASE_SERVICE_ROLE_KEY`: llave privada para guardar leads.
+- `SUPABASE_ANON_KEY`: llave publica `anon` de Supabase para guardar leads.
 - `GUIDE_DOWNLOAD_URL`: link del libro.
 - `WHATSAPP_GROUP_URL`: link del grupo.
 
@@ -35,8 +35,8 @@ La tabla ya fue creada en el proyecto Supabase `johnbarbas`.
 
 - Pagina del embudo: lista.
 - Vercel: desplegado desde GitHub.
-- Supabase: tabla creada en el proyecto `johnbarbas`.
-- Pendiente: poner `SUPABASE_SERVICE_ROLE_KEY`, `GUIDE_DOWNLOAD_URL` y `WHATSAPP_GROUP_URL` en Vercel.
+- Supabase: tabla creada en el proyecto `johnbarbas` con permisos para recibir formularios.
+- Pendiente: poner `SUPABASE_ANON_KEY`, `GUIDE_DOWNLOAD_URL` y `WHATSAPP_GROUP_URL` en Vercel.
 
 Sin esas tres variables, el sitio muestra el formulario, pero usa WhatsApp como respaldo porque todavia no puede guardar automaticamente.
 
