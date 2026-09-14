@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía gratis de Minoxidil - John Barbas</title>
+    <meta name="description" content="Descarga gratis la guía de John Barbas para elegir tu kit de Minoxidil según tu caso.">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css?v=6.0">
+    <meta name="theme-color" content="#2563eb">
+</head>
+<body>
+    <div class="main-container guide-page">
+        <nav class="unified-nav">
+            <a href="index.html" class="nav-tab">
+                <i class="fas fa-home"></i>
+                <span>Inicio</span>
+            </a>
+            <a href="/guia" class="nav-tab active">
+                <i class="fas fa-book-open"></i>
+                <span>Gratis</span>
+            </a>
+            <a href="productos.html" class="nav-tab">
+                <i class="fas fa-box"></i>
+                <span>Productos</span>
+            </a>
+            <a href="sucursal.html" class="nav-tab">
+                <i class="fas fa-store"></i>
+                <span>Sucursal</span>
+            </a>
+        </nav>
+
+        <header class="guide-hero">
+            <span class="guide-kicker">Gratis para los que vienen de TikTok</span>
+            <img src="images/profile_johnbarbas1.jpg" alt="John Barbas" class="guide-avatar">
+            <h1>Elige tu kit de Minoxidil sin tirar dinero</h1>
+            <p>Te mando una guía rápida para saber si te conviene empezar con barba, cabello o rutina completa, y qué errores evitar desde el día uno.</p>
+            <div class="guide-proof-row">
+                <span><i class="fas fa-star"></i> 3,000+ clientes</span>
+                <span><i class="fas fa-truck"></i> México</span>
+                <span><i class="fab fa-whatsapp"></i> Grupo privado</span>
+            </div>
+        </header>
+
+        <section class="unified-card guide-benefits">
+            <h2>Qué recibes</h2>
+            <div class="guide-benefit">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <strong>Guía descargable</strong>
+                    <span>Rutina, tiempos reales, errores comunes y cómo elegir kit.</span>
+                </div>
+            </div>
+            <div class="guide-benefit">
+                <i class="fas fa-bullseye"></i>
+                <div>
+                    <strong>Recomendación por objetivo</strong>
+                    <span>Barba, cabello, cejas o si todavía no sabes qué comprar.</span>
+                </div>
+            </div>
+            <div class="guide-benefit">
+                <i class="fab fa-whatsapp"></i>
+                <div>
+                    <strong>Acceso al grupo</strong>
+                    <span>Tips, avisos y ofertas para quienes quieran seguimiento por WhatsApp.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="unified-card lead-card guide-form-card">
+            <h2>Un registro, dos accesos</h2>
+            <p>Déjame tu correo y WhatsApp. En la siguiente pantalla te doy acceso inmediato al libro y al grupo privado.</p>
+
+            <div class="unlock-pair">
+                <div class="unlock-item">
+                    <i class="fas fa-book-open"></i>
+                    <strong>Libro gratis</strong>
+                    <span>Descarga la guía al terminar el registro.</span>
+                </div>
+                <div class="unlock-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <strong>Grupo privado</strong>
+                    <span>Entra para tips, avisos y ofertas.</span>
+                </div>
+            </div>
+
+            <form id="guideLeadForm" class="lead-form" novalidate>
+                <input type="text" name="website" class="lead-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <div class="lead-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="name" placeholder="Tu nombre" autocomplete="name" required>
+                </div>
+
+                <div class="lead-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Tu correo electrónico" autocomplete="email" required>
+                </div>
+
+                <div class="lead-field">
+                    <i class="fab fa-whatsapp"></i>
+                    <input type="tel" name="whatsapp" placeholder="Tu WhatsApp con lada" autocomplete="tel" required>
+                </div>
+
+                <div class="lead-field">
+                    <i class="fas fa-bullseye"></i>
+                    <select name="goal" required>
+                        <option value="">¿Qué quieres mejorar?</option>
+                        <option value="barba">Barba</option>
+                        <option value="cabello">Cabello</option>
+                        <option value="cejas-pestanas">Cejas / pestañas</option>
+                        <option value="orientacion">No sé, quiero orientación</option>
+                    </select>
+                </div>
+
+                <label class="lead-check">
+                    <input type="checkbox" name="guideConsent" required>
+                    <span>Quiero recibir la guía y entiendo que John Barbas guardará mis datos para darme acceso y seguimiento.</span>
+                </label>
+
+                <label class="lead-check">
+                    <input type="checkbox" name="emailMarketingConsent">
+                    <span>Acepto recibir tips, recordatorios y promociones por email.</span>
+                </label>
+
+                <label class="lead-check">
+                    <input type="checkbox" name="whatsappMarketingConsent" required>
+                    <span>Acepto recibir tips, avisos y promociones por WhatsApp, incluyendo acceso al grupo.</span>
+                </label>
+
+                <button type="submit" class="btn-unified btn-whatsapp" id="guideSubmitButton">
+                    <i class="fas fa-lock-open"></i>
+                    <span>Desbloquear guía y grupo</span>
+                </button>
+
+                <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20recibir%20el%20libro%20gratis%20y%20entrar%20al%20grupo." target="_blank" class="lead-fallback-link" id="leadFallbackLink">
+                    Si falla el registro, mándame tus datos por WhatsApp
+                </a>
+
+                <p id="guideLeadStatus" class="lead-status" role="status" aria-live="polite"></p>
+            </form>
+
+            <p class="lead-privacy-note">
+                Tus datos se usan para enviarte la guía y seguimiento de John Barbas. Puedes pedir que te dejen de contactar cuando quieras. <a href="privacidad.html">Ver privacidad</a>.
+            </p>
+        </section>
+
+        <section class="unified-card guide-offer">
+            <h2>Después de leerla</h2>
+            <p>Si quieres empezar, te dejo una recomendación rápida según tu caso y puedes pedir tu kit por WhatsApp.</p>
+            <a href="productos.html" class="btn-unified btn-primary">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Ver kits disponibles</span>
+            </a>
+        </section>
+    </div>
+
+    <script src="facebookPixel.js" async></script>
+    <script src="lead.js" defer></script>
+</body>
+</html>

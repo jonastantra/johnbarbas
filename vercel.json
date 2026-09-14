@@ -1,0 +1,29 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/guia",
+      "destination": "/guia.html"
+    },
+    {
+      "source": "/gracias",
+      "destination": "/gracias.html"
+    },
+    {
+      "source": "/privacidad",
+      "destination": "/privacidad.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu guía está lista - John Barbas</title>
+    <meta name="description" content="Descarga la guía gratuita de John Barbas y entra al grupo privado de WhatsApp.">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css?v=6.0">
+    <meta name="theme-color" content="#2563eb">
+</head>
+<body>
+    <div class="main-container thank-you-page">
+        <nav class="unified-nav">
+            <a href="index.html" class="nav-tab">
+                <i class="fas fa-home"></i>
+                <span>Inicio</span>
+            </a>
+            <a href="/guia" class="nav-tab active">
+                <i class="fas fa-book-open"></i>
+                <span>Gratis</span>
+            </a>
+            <a href="productos.html" class="nav-tab">
+                <i class="fas fa-box"></i>
+                <span>Productos</span>
+            </a>
+            <a href="sucursal.html" class="nav-tab">
+                <i class="fas fa-store"></i>
+                <span>Sucursal</span>
+            </a>
+        </nav>
+
+        <section class="guide-hero thank-you-hero">
+            <span class="guide-kicker">Listo</span>
+            <img src="images/profile_johnbarbas1.jpg" alt="John Barbas" class="guide-avatar">
+            <h1>Tu guía ya está desbloqueada</h1>
+            <p>Descárgala ahora y entra al grupo privado para recibir tips, avisos y recomendaciones.</p>
+        </section>
+
+        <section class="unified-card access-card" id="accessCard">
+            <h2>Tus dos accesos</h2>
+            <a href="#" id="downloadGuideButton" class="btn-unified btn-whatsapp is-disabled" target="_blank" rel="noopener">
+                <i class="fas fa-download"></i>
+                <span>Descargar libro gratis</span>
+            </a>
+            <a href="#" id="joinGroupButton" class="btn-unified btn-primary is-disabled" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i>
+                <span>Entrar al grupo privado</span>
+            </a>
+            <p id="accessMessage" class="lead-status">Cargando tus accesos...</p>
+        </section>
+
+        <section class="unified-card guide-next-step">
+            <h2>¿Quieres que te recomiende un kit?</h2>
+            <p>Si ya tienes claro tu objetivo, mándame mensaje y te digo qué opción te conviene según tu caso.</p>
+            <a href="https://wa.me/525569380408?text=Hola%20John,%20ya%20descargu%C3%A9%20la%20gu%C3%ADa%20y%20quiero%20que%20me%20recomiendes%20mi%20kit." target="_blank" class="btn-unified btn-whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span>Quiero recomendación por WhatsApp</span>
+            </a>
+            <a href="productos.html" class="btn-unified btn-primary">
+                <i class="fas fa-box"></i>
+                <span>Ver productos</span>
+            </a>
+        </section>
+    </div>
+
+    <script src="facebookPixel.js" async></script>
+    <script>
+        const access = JSON.parse(sessionStorage.getItem('johnbarbasLeadAccess') || '{}');
+        const guideButton = document.getElementById('downloadGuideButton');
+        const groupButton = document.getElementById('joinGroupButton');
+        const message = document.getElementById('accessMessage');
+
+        function enableAccess(button, url) {
+            button.href = url;
+            button.classList.remove('is-disabled');
+            button.removeAttribute('aria-disabled');
+        }
+
+        if (access.guideUrl && access.whatsappGroupUrl) {
+            enableAccess(guideButton, access.guideUrl);
+            enableAccess(groupButton, access.whatsappGroupUrl);
+            message.textContent = 'También te enviamos el acceso por email para que no lo pierdas.';
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'ViewContent', { content_name: 'Guia Minoxidil John Barbas' });
+            }
+        } else {
+            message.textContent = 'Para proteger el acceso, primero deja tus datos en la página de la guía.';
+            guideButton.href = '/guia';
+            groupButton.href = '/guia';
+            guideButton.querySelector('span').textContent = 'Ir al formulario';
+            groupButton.querySelector('span').textContent = 'Ir al formulario';
+            guideButton.classList.remove('is-disabled');
+            groupButton.classList.remove('is-disabled');
+        }
+    </script>
+</body>
+</html>
