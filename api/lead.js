@@ -51,7 +51,9 @@ async function insertLead(lead) {
     const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
     if (!supabaseUrl || !serviceKey) {
-        throw new Error('Supabase is not configured.');
+        const error = new Error('Supabase is not configured.');
+        error.code = 'SUPABASE_NOT_CONFIGURED';
+        throw error;
     }
 
     const response = await fetch(`${supabaseUrl}/rest/v1/${LEADS_TABLE}`, {
@@ -204,6 +206,14 @@ module.exports = async function handler(request, response) {
         }, 200, response);
     } catch (error) {
         console.error(error);
+        if (error.code === 'SUPABASE_NOT_CONFIGURED') {
+            return json({
+                ok: false,
+                error: 'Aun estamos activando el registro automatico. Manda tus datos por WhatsApp para recibir tu acceso.',
+                fallback: true
+            }, 503, response);
+        }
+
         return json({ ok: false, error: 'No se pudo guardar el lead.' }, 500, response);
     }
 };

@@ -99,7 +99,7 @@
                 fallbackLink.classList.add('is-visible');
             }
 
-            setStatus('No se pudo guardar automáticamente. Usa el enlace de WhatsApp para no perder tu acceso.', 'error');
+            setStatus('Ya casi queda el registro automático. Por ahora toca el enlace de WhatsApp y se mandan tus datos listos.', 'error');
             submitButton.disabled = false;
             submitButton.querySelector('span').textContent = 'Desbloquear guía y grupo';
         }
