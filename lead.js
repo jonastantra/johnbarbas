@@ -59,7 +59,8 @@
         submitButton.querySelector('span').textContent = 'Guardando tus datos...';
 
         try {
-            const response = await fetch('/api/lead', {
+            const apiBase = (window.location.hostname === 'johnbarbas.com' || window.location.hostname === 'www.johnbarbas.com') ? 'https://johnbarbas.vercel.app' : '';
+            const response = await fetch(`${apiBase}/api/lead`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)

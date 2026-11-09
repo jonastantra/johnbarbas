@@ -142,6 +142,19 @@ async function upsertBrevoContact(lead) {
 }
 
 module.exports = async function handler(request, response) {
+    const allowedOrigins = ['https://johnbarbas.com', 'https://www.johnbarbas.com', 'https://johnbarbas.vercel.app'];
+    const origin = request.headers.origin || '';
+    if (allowedOrigins.includes(origin)) {
+        response.setHeader('Access-Control-Allow-Origin', origin);
+        response.setHeader('Vary', 'Origin');
+    }
+    if (request.method === 'OPTIONS') {
+        response.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+        response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+        response.statusCode = 204;
+        return response.end();
+    }
+
     if (request.method !== 'POST') {
         return json({ ok: false, error: 'Method not allowed.' }, 405, response);
     }
