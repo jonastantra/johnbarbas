@@ -10,31 +10,11 @@ class ModernWebsite {
     }
 
     init() {
-        this.setupCounters();
-        this.setupTabNavigation();
         this.setupWhatsAppTracking();
         this.setupLazyLoading();
         this.setupToastSystem();
         this.setupAnimations();
         this.setupPerformanceOptimizations();
-        this.preloadCriticalResources();
-    }
-
-    // Enhanced tab navigation with smooth transitions
-    setupTabNavigation() {
-        const tabButtons = document.querySelectorAll('.tab-button');
-        tabButtons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                const href = button.getAttribute('href');
-                if (href && href !== '#') {
-                    this.showToast('Navegando...', 'info');
-                    setTimeout(() => {
-                        window.location.href = href;
-                    }, 300);
-                }
-            });
-        });
     }
 
     // Lazy loading implementation with Intersection Observer
@@ -132,74 +112,6 @@ class ModernWebsite {
         }, duration);
     }
 
-    // Enhanced counter animation with better performance
-    setupCounters() {
-        const counters = document.querySelectorAll('.counter');
-        if (counters.length === 0) return;
-
-        const animationDuration = 2000;
-        let animationHasRun = false;
-
-        const animateCounter = (counterElement) => {
-            const targetStr = counterElement.getAttribute('data-target');
-            if (!targetStr) return; // Skip if no data-target
-
-            const target = parseInt(targetStr);
-            // Preserve the '+' if it was in the original text or intended
-            const originalText = counterElement.textContent;
-            const hasPlus = originalText.includes('+') || counterElement.parentElement.textContent.includes('+');
-            
-            const startTime = performance.now();
-
-            const updateCounter = (currentTime) => {
-                const elapsedTime = currentTime - startTime;
-                const progress = Math.min(elapsedTime / animationDuration, 1);
-                
-                // Easing function for smooth animation (Ease Out Quart)
-                const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-                const currentValue = Math.floor(easeOutQuart * target);
-                
-                counterElement.textContent = currentValue.toLocaleString() + (hasPlus ? '+' : '');
-
-                if (progress < 1) {
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    counterElement.textContent = target.toLocaleString() + (hasPlus ? '+' : '');
-                }
-            };
-
-            requestAnimationFrame(updateCounter);
-        };
-
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observerCallback = (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !animationHasRun) {
-                    counters.forEach(counter => animateCounter(counter));
-                    animationHasRun = true;
-                }
-            });
-        };
-
-        const counterSection = document.getElementById('animated-counters-section');
-        if (counterSection) {
-            const observer = new IntersectionObserver(observerCallback, observerOptions);
-            observer.observe(counterSection);
-        } else {
-            // Fallback: observe the container of the counters directly if section ID is missing
-            const container = document.querySelector('.stats-container');
-            if (container) {
-                const observer = new IntersectionObserver(observerCallback, observerOptions);
-                observer.observe(container);
-            }
-        }
-    }
-
     // WhatsApp click tracking and analytics
     setupWhatsAppTracking() {
         document.addEventListener('click', (e) => {
@@ -284,21 +196,6 @@ class ModernWebsite {
             document.head.appendChild(link);
             this.preloadedPages.add(url);
         }
-    }
-
-    preloadCriticalResources() {
-        const criticalImages = [
-            'images/profile_johnbarbas1.jpg',
-            'images/product/1balsamo.jpg',
-            'images/product/3balsamos.jpg',
-            'images/product/3meses.jpg',
-            'images/product/6meses.jpg'
-        ];
-
-        criticalImages.forEach(src => {
-            const img = new Image();
-            img.src = src;
-        });
     }
 
     // Enhanced animations setup

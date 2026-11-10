@@ -23,20 +23,6 @@
     <link rel="stylesheet" href="styles.css?v=6.2">
     <link rel="preload" as="image" href="images/profile_johnbarbas1.jpg">
     
-    <!-- Critical CSS Fallback -->
-    <style>
-        body { font-family: 'Open Sans', sans-serif; background-color: #f8fafc; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-        .main-container { width: 100%; max-width: 480px; background: transparent; }
-        .unified-card { background: white; border-radius: 20px; padding: 24px; margin-bottom: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08); }
-        .btn-unified { display: flex; align-items: center; justify-content: center; width: 100%; padding: 14px; border-radius: 14px; font-weight: 600; margin-bottom: 10px; text-decoration: none; border: none; cursor: pointer; }
-        .btn-whatsapp { background-color: #25D366; color: white; }
-        .btn-primary { background-color: white; color: #2563eb; border: 2px solid #2563eb; }
-        .profile-image { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; }
-        .page-header { text-align: center; background: white; padding: 35px 25px; border-radius: 20px; margin-bottom: 20px; }
-        .nav-tab { text-decoration: none; color: #6b7280; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center; }
-        .unified-nav { background: white; padding: 12px; border-radius: 20px; display: flex; justify-content: space-around; margin-bottom: 20px; }
-        img { max-width: 100%; }
-    </style>
     
     <!-- Meta tags -->
     <meta name="description" content="John Barbas - Experto en Minoxidil Premium. Crecimiento de barba y cabello garantizado.">
@@ -44,6 +30,16 @@
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
+    <!-- Barra fija de compra (portada) -->
+    <style>
+        .main-container { padding-bottom: 92px; }
+        .sticky-buy-bar { position: fixed; left: 50%; transform: translateX(-50%); bottom: 0; width: 100%; max-width: 480px; background: #ffffff; box-shadow: 0 -4px 18px rgba(0,0,0,0.13); display: flex; align-items: center; gap: 12px; padding: 10px 104px calc(10px + env(safe-area-inset-bottom)) 16px; z-index: 900; box-sizing: border-box; }
+        .sticky-buy-bar .sbb-info { flex: 1; min-width: 0; }
+        .sticky-buy-bar .sbb-name { display: block; font-size: 0.82rem; font-weight: 700; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .sticky-buy-bar .sbb-price { display: block; font-size: 0.8rem; color: #2563eb; font-weight: 700; }
+        .sticky-buy-bar .sbb-btn { background: #2563eb; color: #fff; text-decoration: none; font-weight: 700; font-size: 0.92rem; padding: 12px 20px; border-radius: 12px; white-space: nowrap; }
+    </style>
+
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -248,30 +244,11 @@
                 <i class="fas fa-fire" style="color: #f59e0b; margin-right: 8px;"></i>Otros productos populares
             </h3>
             
-            <!-- Producto 1: Balsamo -->
-            <div style="background: #f8fafc; border-radius: 14px; padding: 16px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
-                <div style="display: flex; gap: 12px; align-items: center;">
-                    <div style="width: 70px; height: 70px; border-radius: 10px; overflow: hidden; flex-shrink: 0;">
-                        <img src="images/product/1balsamo.jpg" alt="Bálsamo Minoxidil" style="width: 100%; height: 100%; object-fit: cover;" decoding="async" loading="lazy">
-                    </div>
-                    <div style="flex-grow: 1;">
-                        <h4 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 4px 0; color: #0f172a;">Bálsamo Minoxidil 20%</h4>
-                        <p style="font-size: 0.8rem; color: #64748b; margin: 0 0 6px 0;">Crecimiento acelerado y cierre de huecos</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-size: 1.1rem; font-weight: 700; color: #2563eb;">$699 MXN</span>
-                            <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20el%20B%C3%A1lsamo%20Minoxidil%2020%25." target="_blank" style="background: #25D366; color: white; padding: 8px 14px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; text-decoration: none;">
-                                <i class="fab fa-whatsapp"></i> Pedir
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
             <!-- Producto 2: 3 Meses Kirkland -->
             <div style="background: #f8fafc; border-radius: 14px; padding: 16px; margin-bottom: 12px; border: 1px solid #e2e8f0;">
                 <div style="display: flex; gap: 12px; align-items: center;">
                     <div style="width: 70px; height: 70px; border-radius: 10px; overflow: hidden; flex-shrink: 0;">
-                        <img src="images/product/3meses.jpg" alt="3 Meses Kirkland" style="width: 100%; height: 100%; object-fit: cover;" decoding="async" loading="lazy">
+                        <img src="images/product/3meses.jpg" alt="3 Meses Kirkland" width="64" height="64" style="width: 100%; height: 100%; object-fit: cover;" decoding="async" loading="lazy">
                     </div>
                     <div style="flex-grow: 1;">
                         <h4 style="font-size: 0.95rem; font-weight: 700; margin: 0 0 4px 0; color: #0f172a;">3 Meses Minoxidil Kirkland</h4>
@@ -290,7 +267,7 @@
             <div style="background: linear-gradient(135deg, #fdf4ff 0%, #faf5ff 100%); border-radius: 14px; padding: 16px; border: 1px solid #e9d5ff;">
                 <div style="display: flex; gap: 12px; align-items: center;">
                     <div style="width: 70px; height: 70px; border-radius: 10px; overflow: hidden; flex-shrink: 0;">
-                        <img src="images/product/3balsamos.jpg" alt="Pack 3 Bálsamos" style="width: 100%; height: 100%; object-fit: cover;" decoding="async" loading="lazy">
+                        <img src="images/product/3balsamos.jpg" alt="Pack 3 Bálsamos" width="64" height="64" style="width: 100%; height: 100%; object-fit: cover;" decoding="async" loading="lazy">
                     </div>
                     <div style="flex-grow: 1;">
                         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
@@ -350,67 +327,6 @@
             </div>
         </div>
 
-        <div class="unified-card kit-picker-card">
-            <h3 class="card-title" style="margin-bottom: 6px; text-align: center;">Elige rápido tu kit</h3>
-            <p style="text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px;">Toca tu caso y te mando el kit recomendado</p>
-            <div class="kit-picker-grid">
-                <a href="https://wa.me/525569380408?text=Hola%20John,%20estoy%20empezando.%20Quiero%20saber%20si%20me%20conviene%201%20o%203%20meses%20de%20minoxidil." target="_blank" data-emoji="🌱">
-                    <strong>Estoy empezando</strong>
-                    <span>1 o 3 meses</span>
-                </a>
-                <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20un%20tratamiento%20serio.%20Me%20interesa%20el%20kit%20de%206%20meses." target="_blank" data-emoji="💪">
-                    <strong>Voy en serio</strong>
-                    <span>6 meses</span>
-                </a>
-                <a href="https://wa.me/525569380408?text=Hola%20John,%20tengo%20piel%20sensible.%20Quiero%20preguntar%20por%20minoxidil%20espuma." target="_blank" data-emoji="🧴">
-                    <strong>Piel sensible</strong>
-                    <span>Pregunta por espuma</span>
-                </a>
-                <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20rutina%20completa%3A%20minoxidil%2C%20biotina%20y%20dermaroller." target="_blank" data-emoji="🧬">
-                    <strong>Rutina completa</strong>
-                    <span>Minoxidil + apoyo</span>
-                </a>
-            </div>
-        </div>
-
-        <div class="unified-card lead-card">
-            <h3 class="card-title" style="margin-bottom: 6px; text-align: center;">Libro + grupo gratis</h3>
-            <p style="font-size: 0.86rem; color: #475569; text-align: center; margin-bottom: 14px;">Déjame tu correo y WhatsApp una sola vez para desbloquear el libro y entrar al grupo privado.</p>
-            <a href="/guia" class="btn-unified btn-whatsapp">
-                <i class="fas fa-book-open"></i>
-                <span>Desbloquear acceso gratis</span>
-            </a>
-            <p style="text-align: center; font-size: 0.72rem; color: var(--text-muted); margin: 10px 0 0 0;">
-                <i class="fas fa-lock" style="margin-right: 4px;"></i>Acceso automático después del registro.
-            </p>
-        </div>
-
-        <!-- Social Proof - Estadísticas -->
-        <div class="unified-card" id="animated-counters-section" style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);">
-            <h3 class="card-title text-center mb-3" style="font-size: 1.1rem;">
-                <i class="fas fa-chart-line" style="color: #2563eb; margin-right: 8px;"></i>Resultados Reales
-            </h3>
-            <div class="stats-container">
-                <div class="stat-item">
-                    <span class="stat-number counter" data-target="3000">0+</span>
-                    <span class="stat-label">Clientes</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number counter" data-target="500">0+</span>
-                    <span class="stat-label">Envíos</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number counter" data-target="1000">0+</span>
-                    <span class="stat-label">Reseñas</span>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 16px;">
-                <a href="https://maximus-inc.com.mx/pages/clientes-de-maximus-satisfechos" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); color: #d97706; padding: 10px 20px; border-radius: 25px; font-size: 0.85rem; font-weight: 700; text-decoration: none; box-shadow: 0 2px 8px rgba(217, 119, 6, 0.2);">
-                    <i class="fas fa-star"></i> Ver testimonios de clientes
-                </a>
-            </div>
-        </div>
-
         <!-- Antes y Después - Prueba Social Visual -->
         <div class="unified-card" style="padding: 20px;">
             <h3 class="card-title" style="text-align: center; margin-bottom: 16px;">
@@ -422,7 +338,7 @@
             <div class="before-after-gallery">
                 <div class="before-after-item">
                     <div style="position: relative;">
-                        <img src="images/ANTES.webp" alt="Antes" style="width: 100%; height: 260px; object-fit: contain; background: #f1f5f9; border-radius: 14px 14px 0 0;" decoding="async" loading="lazy">
+                        <img src="images/ANTES.webp" alt="Antes" width="600" height="750" style="width: 100%; height: 260px; object-fit: contain; background: #f1f5f9; border-radius: 14px 14px 0 0;" decoding="async" loading="lazy">
                         <span style="position: absolute; top: 10px; left: 10px; background: #ef4444; color: white; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 10px;">Mes 1</span>
                     </div>
                     <div style="padding: 12px; text-align: center; background: #fef2f2; border-radius: 0 0 14px 14px;">
@@ -434,7 +350,7 @@
                 </div>
                 <div class="before-after-item">
                     <div style="position: relative;">
-                        <img src="images/DESPUES.jpg" alt="Después" style="width: 100%; height: 260px; object-fit: contain; background: #f1f5f9; border-radius: 14px 14px 0 0;" decoding="async" loading="lazy">
+                        <img src="images/DESPUES.jpg" alt="Después" width="600" height="750" style="width: 100%; height: 260px; object-fit: contain; background: #f1f5f9; border-radius: 14px 14px 0 0;" decoding="async" loading="lazy">
                         <span style="position: absolute; top: 10px; left: 10px; background: #10b981; color: white; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 10px;">Mes 4</span>
                     </div>
                     <div style="padding: 12px; text-align: center; background: #ecfdf5; border-radius: 0 0 14px 14px;">
@@ -521,28 +437,8 @@
             </div>
         </div>
 
-        <!-- Botones Secundarios -->
-        <div style="display: flex; gap: 12px; margin-bottom: 20px;">
-            <a href="productos.html" class="btn-unified btn-primary" style="flex: 1; margin-bottom: 0;">
-                <i class="fas fa-shopping-bag"></i>
-                <span>Ver Catálogo</span>
-            </a>
-            <a href="sucursal.html" class="btn-unified btn-primary" style="flex: 1; margin-bottom: 0;">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Ver Sucursal</span>
-            </a>
-        </div>
-
         <!-- Footer -->
         
-<style>
-.jb-social{margin:18px auto;max-width:640px;text-align:center}
-.jb-social h3{font-family:'Poppins',sans-serif;margin:0 0 6px;font-size:1.05rem}
-.jb-social p{margin:8px 0 0;color:#475569;font-size:.85rem}
-.jb-social-row{display:flex;gap:14px;justify-content:center;margin-top:10px}
-.jb-social-row a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#111827;color:#fff;font-size:22px;text-decoration:none}
-.jb-social-row a:hover{background:#2563eb}
-</style>
 <section class="unified-card jb-follow" aria-label="Redes sociales de John Barbas">
     <h3>Sígueme en mis redes</h3>
     <p class="jb-follow-sub">Contenido diario de barba y minoxidil. Sígueme y no te pierdas nada:</p>
@@ -579,43 +475,23 @@
 
     </div>
 
+
+    <!-- Barra fija de compra -->
+    <div class="sticky-buy-bar">
+        <div class="sbb-info">
+            <span class="sbb-name">Bálsamo Minoxidil 20%</span>
+            <span class="sbb-price">$599 MXN</span>
+        </div>
+        <a class="sbb-btn" href="https://maximus-inc.com.mx/products/1-balsamo-de-minoxidil-al-20-4-oz-crecimiento-de-barba-y-bigote-extra-fuerte-cierra-huecos" target="_blank" rel="noopener">Comprar</a>
+    </div>
+
     <!-- WhatsApp Float -->
     <a href="https://wa.me/5215641989504?text=Hola%2C%20vi%20John%20Barbas%20y%20quiero%20informaci%C3%B3n%20del%20B%C3%A1lsamo%20Minoxidil%2020%25" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Abrir WhatsApp de Maximus Inc">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- Scripts -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        const leadForm = document.getElementById('leadForm');
-        if (leadForm) {
-            leadForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-                const data = new FormData(leadForm);
-                const nombre = (data.get('nombre') || '').toString().trim();
-                const whatsapp = (data.get('whatsapp') || '').toString().trim();
-                const email = (data.get('email') || '').toString().trim();
-                const objetivo = (data.get('objetivo') || '').toString().trim();
-                const message = [
-                    'Hola John, vengo de TikTok y quiero la guia rapida para elegir mi kit.',
-                    nombre ? `Mi nombre es ${nombre}.` : '',
-                    whatsapp ? `Mi WhatsApp es ${whatsapp}.` : '',
-                    email ? `Mi correo es ${email}.` : '',
-                    objetivo ? `Mi objetivo es ${objetivo}.` : '',
-                    'Quiero que me recomiendes una rutina.'
-                ].filter(Boolean).join(' ');
-                window.open(`https://wa.me/525569380408?text=${encodeURIComponent(message)}`, '_blank');
-            });
-        }
-    </script>
-    <script src="script.js" defer></script>
+    <script src="script.js?v=2" defer></script>
     <script src="facebookPixel.js" async></script>
 </body>
 </html>
