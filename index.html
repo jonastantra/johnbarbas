@@ -46,6 +46,17 @@
         .jb-latest-title { font-size: 0.85rem; font-weight: 600; color: #0f172a; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
         .jb-latest-tag { font-size: 0.68rem; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; }
         .jb-latest-group { font-size: 0.78rem; font-weight: 700; color: #475569; margin: 14px 0 8px; }
+
+        .bf-strip { position: relative; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 10px; overflow: hidden; background: linear-gradient(120deg, #7f1d1d, #b91c1c 55%, #7f1d1d); color: #fff; text-decoration: none; border-radius: 14px; padding: 11px 38px; margin-bottom: 14px; font-family: 'Poppins', sans-serif; box-shadow: 0 6px 18px rgba(185, 28, 28, 0.28); }
+        .bf-strip-text { font-size: 0.86rem; font-weight: 600; text-align: center; line-height: 1.35; }
+        .bf-strip-cta { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; font-size: 0.86rem; }
+        .bf-spark { position: absolute; color: #fde68a; pointer-events: none; animation: bfTwinkle 2.6s ease-in-out infinite alternate; }
+        .bf-spark.s1 { top: 4px; left: 12px; font-size: 11px; }
+        .bf-spark.s2 { top: 6px; right: 14px; font-size: 9px; animation-delay: .7s; }
+        .bf-spark.s3 { bottom: 4px; left: 24%; font-size: 8px; animation-delay: 1.3s; }
+        .bf-spark.s4 { bottom: 5px; right: 22%; font-size: 10px; animation-delay: 1.9s; }
+        @keyframes bfTwinkle { from { opacity: .25; transform: scale(.7) rotate(0deg); } to { opacity: 1; transform: scale(1.15) rotate(20deg); } }
+        @media (prefers-reduced-motion: reduce) { .bf-spark { animation: none; opacity: .65; } }
     </style>
 
 </head>
@@ -55,7 +66,18 @@
 <!-- End Google Tag Manager (noscript) -->
 
     <div class="main-container">
-        
+
+        <!-- Franja Buen Fin (se oculta sola al terminar el 17-nov-2026 23:59 CDMX) -->
+        <a class="bf-strip" id="jb-buenfin-strip" href="https://maximus-inc.com.mx/collections/balsamo-20-kits" target="_blank" rel="noopener" aria-label="Buen Fin en Maximus Inc: kit completo a $996, solo hasta el 17 de noviembre">
+            <span class="bf-spark s1" aria-hidden="true">✦</span>
+            <span class="bf-spark s2" aria-hidden="true">✦</span>
+            <span class="bf-spark s3" aria-hidden="true">✦</span>
+            <span class="bf-spark s4" aria-hidden="true">✦</span>
+            <span class="bf-strip-text"><strong>Buen Fin:</strong> kit completo <strong>$996</strong> — solo hasta el 17 de noviembre</span>
+            <span class="bf-strip-cta">Ver el kit →</span>
+        </a>
+        <script>(function(){var el=document.getElementById('jb-buenfin-strip');if(el&&Date.now()>=Date.UTC(2026,10,18,6,0,0)){el.remove();}})();</script>
+
         <!-- Navegación -->
         <nav class="unified-nav">
             <a href="index.html" class="nav-tab active">
