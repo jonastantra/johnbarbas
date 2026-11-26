@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css?v=6.2">
+    <link rel="stylesheet" href="styles.css?v=6.3">
     <meta name="theme-color" content="#2563eb">
 </head>
 <body>
@@ -49,7 +49,7 @@
             <div class="guide-proof-row">
                 <span><i class="fas fa-star"></i> 3,000+ clientes</span>
                 <span><i class="fas fa-truck"></i> México</span>
-                <span><i class="fab fa-whatsapp"></i> Grupo privado</span>
+                <span><i class="fas fa-book-open"></i> Libro en PDF</span>
             </div>
         </header>
 
@@ -72,26 +72,26 @@
             <div class="guide-benefit">
                 <i class="fab fa-whatsapp"></i>
                 <div>
-                    <strong>Acceso al grupo</strong>
-                    <span>Tips, avisos y ofertas para quienes quieran seguimiento por WhatsApp.</span>
+                    <strong>Dudas por WhatsApp</strong>
+                    <span>Si después de leerlo tienes dudas, me escribes y te digo qué te conviene.</span>
                 </div>
             </div>
         </section>
 
         <section class="unified-card lead-card guide-form-card">
-            <h2>Un registro, dos accesos</h2>
-            <p>Déjame tu correo y WhatsApp. En la siguiente pantalla te doy acceso inmediato al libro y al grupo privado.</p>
+            <h2>Recibe el libro en tu correo</h2>
+            <p>Déjame tu correo. Te llega un mensaje para confirmar que es tuyo y en ese momento te mando el libro.</p>
 
             <div class="unlock-pair">
                 <div class="unlock-item">
                     <i class="fas fa-book-open"></i>
                     <strong>Libro gratis</strong>
-                    <span>Descarga la guía al terminar el registro.</span>
+                    <span>Te llega a tu correo al confirmar.</span>
                 </div>
                 <div class="unlock-item">
                     <i class="fab fa-whatsapp"></i>
-                    <strong>Grupo privado</strong>
-                    <span>Entra para tips, avisos y ofertas.</span>
+                    <strong>Dudas por WhatsApp</strong>
+                    <span>Te contesto en el 55 6938 0408.</span>
                 </div>
             </div>
 
@@ -110,12 +110,12 @@
 
                 <div class="lead-field">
                     <i class="fab fa-whatsapp"></i>
-                    <input type="tel" name="whatsapp" placeholder="Tu WhatsApp con lada" autocomplete="tel" required>
+                    <input type="tel" name="whatsapp" placeholder="Tu WhatsApp con lada (opcional)" autocomplete="tel">
                 </div>
 
                 <div class="lead-field">
                     <i class="fas fa-bullseye"></i>
-                    <select name="goal" required>
+                    <select name="goal">
                         <option value="">¿Qué quieres mejorar?</option>
                         <option value="barba">Barba</option>
                         <option value="cabello">Cabello</option>
@@ -130,21 +130,21 @@
                 </label>
 
                 <label class="lead-check">
-                    <input type="checkbox" name="emailMarketingConsent">
+                    <input type="checkbox" name="emailMarketingConsent" checked>
                     <span>Acepto recibir tips, recordatorios y promociones por email.</span>
                 </label>
 
                 <label class="lead-check">
-                    <input type="checkbox" name="whatsappMarketingConsent" required>
-                    <span>Acepto recibir tips, avisos y promociones por WhatsApp, incluyendo acceso al grupo.</span>
+                    <input type="checkbox" name="whatsappMarketingConsent">
+                    <span>Acepto recibir tips, avisos y promociones por WhatsApp.</span>
                 </label>
 
                 <button type="submit" class="btn-unified btn-whatsapp" id="guideSubmitButton">
-                    <i class="fas fa-lock-open"></i>
-                    <span>Desbloquear guía y grupo</span>
+                    <i class="fas fa-book-open"></i>
+                    <span>Quiero el libro gratis</span>
                 </button>
 
-                <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20recibir%20el%20libro%20gratis%20y%20entrar%20al%20grupo." target="_blank" class="lead-fallback-link" id="leadFallbackLink">
+                <a href="https://wa.me/525569380408?text=Hola%20John,%20quiero%20recibir%20el%20libro%20gratis." target="_blank" class="lead-fallback-link" id="leadFallbackLink">
                     Si falla el registro, mándame tus datos por WhatsApp
                 </a>
 

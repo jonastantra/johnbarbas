@@ -1,8 +1,13 @@
+// Libro gratis «Barba con Método»: el registro va al sistema propio en el VPS
+// (https://libro.johnbarbas.com). Guarda en Listmonk y pide confirmar el correo;
+// al confirmar le llega el PDF. Si el servidor no responde, queda la salida por WhatsApp.
 (function () {
     const form = document.getElementById('guideLeadForm');
     if (!form) return;
 
+    const API = 'https://libro.johnbarbas.com/registro';
     const submitButton = document.getElementById('guideSubmitButton');
+    const label = submitButton.querySelector('span');
     const status = document.getElementById('guideLeadStatus');
     const fallbackLink = document.getElementById('leadFallbackLink');
 
@@ -13,17 +18,22 @@
 
     function getUtmParams() {
         const params = new URLSearchParams(window.location.search);
-        return {
-            utm_source: params.get('utm_source') || '',
-            utm_medium: params.get('utm_medium') || '',
-            utm_campaign: params.get('utm_campaign') || '',
-            utm_content: params.get('utm_content') || '',
-            utm_term: params.get('utm_term') || ''
-        };
+        const out = {};
+        ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (k) {
+            if (params.get(k)) out[k] = params.get(k);
+        });
+        return out;
     }
 
-    function normalizePhone(value) {
-        return value.replace(/[^\d+]/g, '').trim();
+    function showFallback(payload) {
+        if (!fallbackLink) return;
+        const msg = [
+            'Hola John, quiero recibir el libro gratis Barba con Método.',
+            payload.nombre ? 'Mi nombre es ' + payload.nombre + '.' : '',
+            'Mi correo es ' + payload.email + '.'
+        ].join(' ');
+        fallbackLink.href = 'https://wa.me/525569380408?text=' + encodeURIComponent(msg);
+        fallbackLink.classList.add('is-visible');
     }
 
     form.addEventListener('submit', async function (event) {
@@ -32,77 +42,60 @@
 
         const data = new FormData(form);
         const payload = {
-            name: String(data.get('name') || '').trim(),
+            nombre: String(data.get('name') || '').trim(),
             email: String(data.get('email') || '').trim().toLowerCase(),
-            whatsapp: normalizePhone(String(data.get('whatsapp') || '')),
-            goal: String(data.get('goal') || '').trim(),
+            whatsapp: String(data.get('whatsapp') || '').replace(/[^\d+]/g, ''),
+            objetivo: String(data.get('goal') || '').trim(),
             guideConsent: data.get('guideConsent') === 'on',
             emailMarketingConsent: data.get('emailMarketingConsent') === 'on',
             whatsappMarketingConsent: data.get('whatsappMarketingConsent') === 'on',
             website: String(data.get('website') || ''),
-            sourcePage: window.location.pathname,
-            referrer: document.referrer || '',
+            sitio: 'johnbarbas.com' + window.location.pathname,
             utm: getUtmParams()
         };
 
-        if (!payload.name || !payload.email || !payload.whatsapp || !payload.goal) {
-            setStatus('Completa nombre, email, WhatsApp y objetivo para desbloquear la guía.', 'error');
+        if (!payload.email) {
+            setStatus('Escribe tu correo para mandarte el libro.', 'error');
             return;
         }
-
-        if (!payload.guideConsent || !payload.whatsappMarketingConsent) {
-            setStatus('Marca los consentimientos necesarios para recibir la guía y entrar al grupo.', 'error');
+        if (!payload.guideConsent) {
+            setStatus('Marca la primera casilla para poder mandarte el libro.', 'error');
             return;
         }
 
         submitButton.disabled = true;
-        submitButton.querySelector('span').textContent = 'Guardando tus datos...';
+        label.textContent = 'Enviando...';
 
         try {
-            const apiBase = (window.location.hostname === 'johnbarbas.com' || window.location.hostname === 'www.johnbarbas.com') ? 'https://johnbarbas.vercel.app' : '';
-            const response = await fetch(`${apiBase}/api/lead`, {
+            const response = await fetch(API, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             });
+            const result = await response.json().catch(function () { return {}; });
 
-            const result = await response.json();
-
-            if (!response.ok || !result.ok) {
-                throw new Error(result.error || 'No se pudo registrar el lead.');
-            }
-
-            sessionStorage.setItem('johnbarbasLeadAccess', JSON.stringify({
-                guideUrl: result.guideUrl,
-                whatsappGroupUrl: result.whatsappGroupUrl,
-                leadId: result.leadId
-            }));
-
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead', {
-                    content_name: 'Guia Minoxidil John Barbas',
-                    content_category: payload.goal
+            if (response.ok && result.ok) {
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead', { content_name: 'Libro Barba con Metodo', content_category: payload.objetivo || 'sin-objetivo' });
+                }
+                Array.prototype.forEach.call(form.children, function (el) {
+                    if (el !== status) el.hidden = true;
                 });
+                setStatus('¡Listo! Te mandé un correo. Ábrelo y toca «Confirmar y recibir el libro». Si no lo ves en 2 minutos, busca en spam o promociones.', 'ok');
+                return;
             }
-
-            window.location.href = 'gracias.html';
+            if (response.status === 400 || response.status === 429) {
+                setStatus(result.error || 'Revisa tu correo e intenta de nuevo.', 'error');
+                submitButton.disabled = false;
+                label.textContent = 'Quiero el libro gratis';
+                return;
+            }
+            throw new Error(result.error || 'Sin respuesta');
         } catch (error) {
-            const fallbackMessage = [
-                'Hola John, quiero recibir el libro gratis y entrar al grupo.',
-                `Mi nombre es ${payload.name}.`,
-                `Mi correo es ${payload.email}.`,
-                `Mi WhatsApp es ${payload.whatsapp}.`,
-                `Mi objetivo es ${payload.goal}.`
-            ].join(' ');
-
-            if (fallbackLink) {
-                fallbackLink.href = `https://wa.me/525569380408?text=${encodeURIComponent(fallbackMessage)}`;
-                fallbackLink.classList.add('is-visible');
-            }
-
-            setStatus('Ya casi queda el registro automático. Por ahora toca el enlace de WhatsApp y se mandan tus datos listos.', 'error');
+            showFallback(payload);
+            setStatus('No pudimos registrarte ahorita. Toca el enlace de WhatsApp y te lo mando yo.', 'error');
             submitButton.disabled = false;
-            submitButton.querySelector('span').textContent = 'Desbloquear guía y grupo';
+            label.textContent = 'Quiero el libro gratis';
         }
     });
 })();
